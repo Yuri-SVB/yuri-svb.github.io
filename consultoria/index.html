@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quatro perguntas sobre o seu arranjo de autocustódia</title>
+<meta name="description" content="Auditoria em relatório fechado do arranjo de autocustódia que você já tem. Quatro perguntas, respondidas por escrito. Não peço sua seed, seus saldos, seus endereços nem onde você mora.">
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:title" content="Quatro perguntas sobre o seu arranjo de autocustódia">
+<meta property="og:description" content="Auditoria do arranjo que você já tem. Eu nunca peço suas chaves.">
+<meta property="og:image" content="https://yuri-svb.github.io/assets/great-wall.png">
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <img class="mark" src="../assets/mark.png" alt="">
+  <h1>Quatro perguntas sobre o seu arranjo de autocustódia</h1>
+  <nav class="lang">
+    <a href="../">Início</a> · <a href="../audit/">English</a>
+  </nav>
+</header>
+
+<hr>
+
+<p class="lede">Você já tem um arranjo: hardware wallet, passphrase, multisig,
+talvez um decoy, talvez um plano de herança. A pergunta não é se ele é bom. É
+<strong>contra o quê</strong>.</p>
+
+<p>Esta auditoria responde quatro perguntas sobre o arranjo que você já tem, e
+entrega as respostas por escrito.</p>
+
+<h2>Eu nunca peço suas chaves</h2>
+
+<p>Antes de qualquer outra coisa, porque é a parte que importa.</p>
+
+<p><strong>Eu não peço sua seed, seus saldos, seus endereços nem onde você
+mora.</strong> A auditoria trabalha sobre o <em>formato</em> do seu arranjo, não
+sobre o conteúdo dele. Se uma pergunta só pode ser respondida com você me
+dizendo o que tem, ela está fora do escopo.</p>
+
+<p>Isso não é cortesia. Um auditor de resistência a coação que coletasse dados
+de detentores estaria montando exatamente a lista que os meus papers condenam. E
+dado que nunca esteve comigo não pode ser apreendido de mim.</p>
+
+<h2>As quatro perguntas</h2>
+
+<ol class="questions">
+  <li><strong>A sua segurança se apoia em algum truque secreto?</strong> Ela
+  depende de o criminoso não saber o que você faz, e como você faz? Se depende,
+  o mecanismo é obscuridade, e obscuridade tem número de catálogo
+  (<a href="https://cwe.mitre.org/data/definitions/656.html">CWE-656</a>) em
+  todo domínio que não seja custódia de bitcoin.</li>
+
+  <li><strong>Apreendidos os seus dispositivos e os seus segredos, o criminoso
+  conseguiria gastar na hora, ou só depois de algum tempo?</strong> "Depois"
+  quer dizer que você continua sendo um corredor na disputa pelo mesmo saldo, e
+  uma corrida com um competidor ao alcance da mão precifica a sua eliminação.</li>
+
+  <li><strong>A sua custódia é estritamente individual?</strong> Mais alguém
+  pode fazer alguma coisa que te impeça de chegar às suas próprias moedas?
+  Delegar é uma resposta legítima. Delegar sem perceber, não, e conhecer o
+  delegatário no pior dia da sua vida, também não.</li>
+
+  <li><strong>Ela depende de objetos específicos em lugares específicos?</strong>
+  Um cofre, um banco, a casa de um parente, uma jurisdição. E esses lugares são
+  seus? Cada um deles é um endereço que alguém pode alcançar, e um lugar que não
+  é seu é um lugar que outra pessoa pode fechar.</li>
+</ol>
+
+<h2>O que você recebe</h2>
+
+<p>Um relatório fechado, em PDF. Uma seção por pergunta. Cada uma respondida não
+com sim ou não, mas com <strong>o ponto específico do seu arranjo</strong> onde
+ela falha ou se sustenta, a gravidade, e a mudança mais barata que resolve.</p>
+
+<p class="muted">Prazo e preço dependem de quanto arranjo existe para ler, então
+os dois são orçados antes de qualquer coisa começar.</p>
+
+<h2>O que eu não faço</h2>
+
+<p><strong>Não monto decoy com treinamento de negativa.</strong> É o serviço
+mais pedido e o único que recuso, pelo argumento inteiro de
+<a href="https://doi.org/10.5281/zenodo.22778480"><em>The Denial Spiral</em></a>:
+a credibilidade de uma negativa é um recurso comum, e vender fluência em negar
+esgota esse recurso para todo mundo, inclusive para quem nunca comprou nada.</p>
+
+<p>Também não prometo segurança. O relatório diz o que falha e o que se
+sustenta. Não existe carimbo de aprovação aqui, e desconfie de quem oferece
+um.</p>
+
+<p>E não vendo software. Great Wall, BTC-D20, BIP-450 e os papers são MIT ou
+Apache-2.0, e isso não muda: sem versão "pro", sem funcionalidade destravada por
+pagamento, sem fila preferencial para quem doou. Está escrito no
+<a href="https://github.com/Yuri-SVB/support">repositório de apoio</a>, e está
+escrito lá porque promessa em artigo não vale nada e promessa em git tem data. O
+que eu vendo é tempo.</p>
+
+<p>E a implementação do Great Wall <strong>é um protótipo</strong>. Não coloque
+suas economias atrás dela ainda. Quando isso mudar estará escrito, com data, em
+<a href="https://github.com/Yuri-SVB/support/blob/main/DELIVERED.md"><code>DELIVERED.md</code></a>.</p>
+
+<h2>O resultado mais comum</h2>
+
+<p>Na maioria das auditorias a recomendação é mexer no que já existe. Em algumas
+o veredito é que está razoável, e você recebe isso por escrito.</p>
+
+<h2>Começar</h2>
+
+<div class="cta">
+  <p class="mail"><a href="mailto:yuri@t3infosecurity.com">yuri@t3infosecurity.com</a></p>
+  <p>Me diga, em linhas gerais, que tipo de arranjo você usa. Sem números, sem
+  endereços, sem chaves.</p>
+</div>
+
+<footer>
+  <p>Yuri da Silva Villas Boas é criptógrafo aplicado, autor da BIP-450
+  (Formosa) e do protocolo Great Wall. Os argumentos por trás das quatro
+  perguntas estão em dois papers abertos:
+  <a href="https://doi.org/10.5281/zenodo.22018891"><em>The Deadly Race</em></a> e
+  <a href="https://doi.org/10.5281/zenodo.22778480"><em>The Denial Spiral</em></a>.
+  Gratuitos, sem cadastro.</p>
+</footer>
+
+</div>
+</body>
+</html>
