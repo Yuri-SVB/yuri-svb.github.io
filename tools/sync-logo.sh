@@ -3,7 +3,7 @@
 # Reports what changed instead of overwriting in silence.
 set -eu
 
-LOGO=${LOGO:-../priv-draft-great-wall-logo}
+LOGO=${LOGO:-../great-wall-logo}
 [ -d "$LOGO/web" ] || { echo "sync-logo: no logo repo at $LOGO (set LOGO=)" >&2; exit 1; }
 
 sync() {   # <source> <dest> <max-edge>
