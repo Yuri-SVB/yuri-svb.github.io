@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <style>
+      .bg    { fill: #14141a; }
+      .kick  { font-family: "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
+               font-size: 30px; font-weight: 700; letter-spacing: 3px; fill: #ffc200; }
+      .head  { font-family: "Liberation Serif", "DejaVu Serif", Georgia, serif;
+               font-size: 96px; font-weight: 700; fill: #f4f4f6; }
+      .num   { font-family: "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
+               font-size: 52px; font-weight: 700; fill: #ffc200; }
+      .lab   { font-family: "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
+               font-size: 21px; fill: #a0a0ac; }
+      .cav   { font-family: "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
+               font-size: 22px; fill: #babac4; }
+      .rule  { stroke: #33333f; stroke-width: 2; }
+      .accent{ stroke: #ffc200; stroke-width: 6; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="675"/>
+
+  <line class="accent" x1="80" y1="96" x2="200" y2="96"/>
+
+  <text class="kick" x="80" y="160">THE WRENCH ATTACK IS BECOMING</text>
+  <text class="head" x="80" y="268">The French Attack</text>
+
+  <line class="rule" x1="80" y1="330" x2="1120" y2="330"/>
+
+  <text class="num" x="80"  y="404">61 of 351</text>
+  <text class="lab" x="80"  y="438">incidents in the registry</text>
+
+  <text class="num" x="450" y="404">17.4%</text>
+  <text class="lab" x="450" y="438">of everything recorded</text>
+
+  <text class="num" x="820" y="404">~0.9%</text>
+  <text class="lab" x="820" y="438">of world population</text>
+
+  <line class="rule" x1="80" y1="500" x2="1120" y2="500"/>
+
+  <text class="cav" x="80" y="548">Press-sourced registry, so it counts coverage as well as crime. French</text>
+  <text class="cav" x="80" y="580">wrench attacks became a sustained national news story in 2025, which</text>
+  <text class="cav" x="80" y="612">plausibly raises the rate at which French cases enter the registry at all.</text>
+  <text class="lab" x="80" y="648">Data: Jameson Lopp, physical-bitcoin-attacks · doi.org/10.5281/zenodo.22018891</text>
+</svg>

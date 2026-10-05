@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oscuridad, el problema más claro del que nadie habla</title>
+<meta name="description" content="Cualquiera que haya llevado un curso de diseño de protocolos vio el principio de Kerckhoffs más o menos en la segunda semana. Es el que todos saben recitar. Y esta comunidad, que se pasa seis horas discutiendo si el RNG de una cartera es confiable, entrega defensas contra coacción física construidas">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <img class="mark" src="../../assets/mark.png" alt="">
+  <h1>Oscuridad, el problema más claro del que nadie habla</h1>
+  <p class="role"><time datetime="2026-10-05">2026-10-05</time></p>
+  <nav class="lang"><a href="../">All posts</a> · <a href="index.html">English</a> · <a href="pt-BR.html">Português</a> · Español · <a href="fr.html">Français</a> · <a href="it.html">Italiano</a></nav>
+</header>
+
+<hr>
+
+<article>
+<p align="center"><img src="assets/cover-1200x675.webp" alt="Dos personas en un sofá, una con la laptop y otra leyendo, las dos ocupadas, mientras un elefante enorme con máscara de Guy Fawkes está sentado en la sala detrás de ellas sin que nadie lo mencione." width="680"></p>
+
+<p>Cualquiera que haya llevado un curso de diseño de protocolos vio el principio de
+Kerckhoffs más o menos en la segunda semana. Es el que todos saben recitar. Y esta
+comunidad, que se pasa seis horas discutiendo si el RNG de una cartera es
+confiable, entrega defensas contra coacción física construidas sobre seguridad
+por oscuridad, y fallan en la primera página del manual.</p>
+<p>Nada sutil. Los manuales lo dicen solos, y este texto es casi puro citarlos.</p>
+<h2>Lo que Kerckhoffs realmente dice</h2>
+<p>Deja la jerga a un lado. Un sistema tiene que seguir siendo seguro cuando el
+atacante sabe exactamente cómo funciona. Todo menos la llave es público: el
+diseño, el software, el procedimiento, el hecho de que el procedimiento exista.
+Un diseño se juzga por cómo se comporta frente a alguien que leyó la misma
+documentación que tú.</p>
+<p>Eso no es pesimismo sobre los atacantes. Es una admisión sobre la publicación. En
+cuanto una defensa llega al consumidor, su descripción está en un artículo de
+soporte, en el idioma del atacante, indexada y gratis.</p>
+<h3>La seguridad por oscuridad tiene número de catálogo</h3>
+<p>La familia de tácticas que rompe esa regla tiene nombre y número de expediente.
+<em>Reliance on Security Through Obscurity</em>, catalogada como
+<a href="https://cwe.mitre.org/data/definitions/656.html">CWE-656</a>. En cualquier otro
+dominio del software esa entrada es un defecto que se arregla. En la custodia de
+bitcoin es la recomendación de consenso.</p>
+<p>Y este paradigma, que el diseño de protocolos llama <strong>oscuridad</strong>, es
+intrínsecamente condescendiente. Supone que el ladrón no tiene la capacidad
+mental de leer los mismos manuales, ver los mismos tutoriales y tomar los mismos
+cursos que sus víctimas. Si un procedimiento se puede aprender en internet, un
+ladrón también lo aprende, y desde luego va a saber que el procedimiento existe.</p>
+<p>Apunta a la suposición, no a quien la sostiene. La gente que entrega estas
+funciones son ingenieros cuidadosos que se equivocaron en una premisa. Resulta que
+es la que carga con todo lo demás.</p>
+<h2>Tres apuestas sobre lo que va a creer un atacante</h2>
+<p>El consejo habitual viene en tres partes: guarda en silencio, niega si te
+preguntan, ten algo chico para entregar. Reescríbelas sin el tono tranquilizador
+y son tres apuestas sobre el estado mental de un adversario. No tres controles.
+Tres corazonadas sobre lo que va a pensar otra persona, hechas por quien menos
+puede comprobarlo.</p>
+<p>Un control funciona cuando el atacante sabe de él. Esa es toda la distinción, y
+cada mecanismo de abajo falla de ese lado.</p>
+<h2>La clase, en palabras de los propios fabricantes</h2>
+<p>Voy a citar documentación en vez de caracterizarla, porque la clasificación hace
+el trabajo sola y caracterizar invita una discusión sobre intenciones que nadie
+necesita.</p>
+<h3>El PIN que borra, y el respaldo que da por hecho</h3>
+<p>La Jade de Blockstream trae un PIN alterno que, en palabras del centro de ayuda,
+"automatically delete[s] the encrypted wallet information from Jade if entered".
+Se presenta como "especially useful in the event of a physical threat, as you can
+provide this PIN to an attacker". Lo tecleas y el aparato informa nada más
+"Internal Error", así que el borrado se lee como falla y no como decisión.</p>
+<p>Crédito donde toca: el borrado en sí es real, instantáneo y no se puede
+interrumpir. No hay carrera que ganar.</p>
+<p>Ahora lee la siguiente advertencia en esa misma página. Después "there is no way
+to regain access to your funds except by restoring using your recovery phrase",
+así que el titular debe "make sure you have a backup before proceeding".</p>
+<p>La función da por hecho un respaldo. Quien sigue la documentación lo tiene; quien
+no, destruyó sus propios ahorros bajo presión. O sea que lo que el borrado quita
+no es el secreto. Quita el camino <em>del aparato</em> hacia el secreto, y deja en pie
+el camino que pasa por la memoria de la persona sobre dónde está el respaldo.</p>
+<p>El borrado elimina la ruta que no exigía lastimar a nadie, y conserva la que sí.</p>
+<h3>Coldcard documenta la regresión</h3>
+<p>No hace falta deducir el siguiente paso. Un fabricante lo publicó.</p>
+<p>Coldcard trae PIN de truco, entre ellos una cartera de coacción descrita como "a
+personal safety feature… If you must reveal a PIN under duress, give the duress
+PIN instead of your Main PIN". Lógica de señuelo común y corriente. La
+documentación del firmware luego considera qué pasa cuando el señuelo no se cree,
+y su consejo es escalar: "you may be asked what the actual duress PIN is, while
+under duress. We suggest providing the 'brickme' PIN in that case."</p>
+<p>Eso es un fabricante contemplando a un atacante que sabe que los señuelos
+existen, y recomendando un borrado irreversible hecho con la víctima todavía en
+el cuarto, todavía respirando, todavía disponible para que le pregunten dónde
+está el respaldo.</p>
+<p>Otras dos admisiones en la misma página valen la cita porque los fabricantes rara
+vez las hacen. La primera concede que el señuelo es distinguible: "if you are
+somehow facing an attacker who is willing to verify he has the real main PIN,
+it's possible that careful analysis of system responses will imply he's working
+with the duress PIN." El remedio que ofrecen no es un arreglo. Es una petición:
+"if you discover any sequences that reveal this easily, please tell us and we'll
+see if we can cover them up better."</p>
+<p>Seguridad por oscuridad enunciada como programa de mantenimiento. Lo que se está defendiendo no
+es que el señuelo sea indistinguible, sino que nadie ha publicado todavía cómo
+distinguirlo. Un esquema cuya seguridad es el estado actual de la cola de
+divulgación es un esquema que no puedes invocar en el cuarto, porque no tienes
+idea de qué ha leído el hombre que tienes enfrente.</p>
+<p>La segunda admisión es la negativa misma, ofrecida para cuando bloquear el
+aparato resulta indigesto: "alternatively, you can say you set the duress PIN
+once, but have since forgotten it."</p>
+<p>No puedes probar que olvidaste. Es el paper acompañante entero en cinco palabras,
+y aquí está como orientación publicada. El fabricante enumeró las ramas y
+encontró un farol en cada una.</p>
+<h3>Qué afirma en realidad cada fabricante</h3>
+<p>Esto importa, y es donde se equivoca la mayor parte de la crítica de este tipo.
+Las tres empresas no hacen las mismas afirmaciones, y un fabricante que entrega
+un mecanismo sin afirmar que derrota la coacción no cometió el error del que
+trata este texto.</p>
+<p>Blockstream vende el borrado para amenaza física, y no afirma nada parecido de
+sus carteras con passphrase. El encuadre de coacción de los señuelos por
+passphrase es invento de la comunidad, no del fabricante. Coldcard vende las dos
+mitades. Trezor es la imagen espejo de Blockstream: sus carteras con passphrase
+se venden por negabilidad, mientras que su wipe code, al que la propia fabricante
+llama PIN de "self-destruct" y que borra la semilla de recuperación, está
+documentado sin mención alguna de coacción, coerción ni amenaza física.</p>
+<p>Trezor es además a quien le pidieron, en enero de 2022, hacer el borrado
+<em>disimulable</em>: un mensaje definido por el usuario al teclearlo, para que el
+borrado pasara por falla de hardware. La solicitud se cerró como <strong>not planned</strong>.
+El aparato sigue anunciando el borrado abiertamente.</p>
+<p>Esa negativa es el documento más interesante de toda la clase. Muestra que el
+disfraz de "Internal Error" no es intrínseco al borrado. Es una decisión de
+presentación: un fabricante lo construyó, a otro se lo pidieron directamente y
+dijo que no.</p>
+<h3>Una ignorancia, o dos</h3>
+<p>Hay una forma limpia de ordenarlos, y no es por qué tan probable es que el
+atacante sea ignorante. Es por cuántas cosas distintas tiene que ignorar.</p>
+<p>Un señuelo necesita una. No debe saber que los señuelos existen. Concédele eso y
+el señuelo funciona de verdad: se va con un saldo plausible y una historia que
+cierra.</p>
+<p>Una autodestrucción necesita dos, y son independientes. No debe saber que la
+función existe, para que la falla se lea como avería. Y no debe razonar hasta el
+respaldo, que el manual le indicó al titular conservar. La segunda no se sigue de
+la primera. "Este aparato está descompuesto" nunca implicó "esta persona no tiene
+bitcoin". Implica que el instrumento se descompuso, y la siguiente pregunta
+natural es dónde guardas el respaldo, hecha a alguien que sigue ahí parado.</p>
+<p>Así que contra un atacante informado la autodestrucción falla por la razón
+kerckhoffsiana de siempre, y contra uno ignorante falla igual, porque la creencia
+que fabrica no termina el encuentro. Es el único esquema oscuro que no tiene rama
+en la que gane.</p>
+<p align="center"><img src="assets/m1-one-ignorance-or-two.png" alt="Un señuelo necesita que el atacante ignore una cosa. Una autodestrucción necesita que ignore dos, de forma independiente, y no tiene rama en la que gane." width="680"></p>
+
+<p>Hay una versión más silenciosa de la misma falla. El FAQ de Sparrow documenta una
+opción para guardar los datos de la cartera en medios extraíbles, señalando que
+"allows you to store all Sparrow data on removable media making for more
+plausible deniability". La propia página de buenas prácticas de Sparrow mantiene
+las palabras de la semilla respaldadas aparte, "ideally in a different location".
+Entonces el atacante coacciona el respaldo de la semilla, lo carga en su propia
+cartera, y nunca toca el medio escondido. Un señuelo al menos se interpone entre
+él y las monedas. Este no se acerca ni de lejos, y lo que agrega es la confianza
+para soltar una negativa.</p>
+<h2>Ochenta y ocho personas, doce casos</h2>
+<p>La clase supone un adversario que el expediente dice que no existe.</p>
+<p>La fiscalía francesa ha imputado a 88 personas en alrededor de una docena de
+casos de secuestro y extorsión ligados a cripto, que es un conteo en un momento
+dado de una serie de procesos en curso y no un total cerrado. El conteo de CertiK
+para el primer semestre de 2026 tiene las invasiones de domicilio pasando de 1 a
+20 sobre 52 incidentes en la comparación anual, que es la muestra semestral de una
+empresa y no el registro público, así que lee la dirección y no el decimal.</p>
+<p>Donde sea que se asienten las cifras exactas, describen bandas organizadas con
+reconocimiento y selección de víctimas corriendo sobre bases de datos filtradas.
+No oportunistas incapaces de leer una página de soporte en el idioma en que fue
+escrita.</p>
+<h2>El tiro por la culata</h2>
+<p>La seguridad por oscuridad no solo es ineficaz. Vendida a escala se derrota a sí misma, y a
+quienes más daña nunca compraron nada.</p>
+<p>El señuelo no es solo una práctica tolerada. Es producto y es plan de estudios.
+Una consultoría de autocustodia en español lista entre sus niveles de pago
+"<em>Passphrase (tu bóveda señuelo)</em> — Billetera señuelo + billetera real. Protección
+ante coacción/coerción": una cartera señuelo vendida, con todas sus letras, como
+protección contra la coacción. Hay guías publicadas que entrenan la actuación.
+Una le dice al titular que mantenga un saldo chico en la semilla desnuda como lo
+que entregarías bajo coacción física, y agrega que "para que esto funcione, el
+saldo señuelo debe ser <em>creíble</em>: suficiente para parecer una cartera real, no
+tanto como para arruinarte si lo pierdes".</p>
+<p>Léelo como objetivo de entrenamiento y el problema salta. Un señuelo solo
+necesita ser creíble ante un atacante que podría no creerlo, y el consejo se
+queda callado sobre qué pasa cuando no lo cree, que es la pregunta completa. La
+seguridad por oscuridad se está vendiendo aquí como si fuera un control, con
+precio y con curso.</p>
+<h3>La negativa es un bien común, y se está agotando</h3>
+<p>El entrenamiento publicitado sube la probabilidad previa de que una negativa
+fluida haya sido ensayada. Cuando el atacante sabe que la credibilidad se enseña
+y se vende, la fluidez deja de ser evidencia de verdad y pasa a ser evidencia de
+coaching. El remedio degrada aquello que vende.</p>
+<p>Y lo degrada para todos. Quien nunca se entrenó, quien está diciendo la verdad
+pelada, ahora niega frente a un atacante que descuenta las negativas fluidas en
+general. También quien no tiene nada de bitcoin. El desarrollo completo está en
+<em>The Denial Spiral</em>, y es la razón por la que esta serie trata la seguridad por
+oscuridad como
+un problema de salud pública y no como uno personal.</p>
+<p>Esconderse necesita algún lugar donde esconderse. Aquello dentro de lo que
+desaparece un titular discreto es la multitud enorme de gente que visiblemente no
+tiene bitcoin, y eso solo funciona mientras la multitud sea mayormente genuina.
+Entrena a suficiente gente para presentarse como común y corriente y lo común
+deja de cargar información, porque el atacante ya no está separando a quienes
+tienen de quienes no. Si todos son agujas, no hay pajar.</p>
+<p align="center"><img src="assets/m2-no-hay.webp" alt="Un montón de agujas de coser sobre fondo blanco, y nada más que agujas en la pila." width="612"></p>
+
+<p align="center"><em>Estructural, no medido. Nadie ha contado cuántos titulares
+practican la discreción, y por el mecanismo 1 nadie puede: la oscuridad no se
+anuncia. La afirmación es sobre qué le pasa a la multitud conforme se extiende el
+entrenamiento, no sobre dónde está la multitud hoy.</em></p>
+
+<h2>Un diseño público hace más creíble una negativa común</h2>
+<p>Una última inversión, y es la parte que me parece genuinamente sorprendente.</p>
+<p>Una defensa oscura le pide al atacante que crea una afirmación, contra su
+incentivo de no creerla y sin manera de que ninguno de los dos zanje el asunto.
+Un diseño especificado en público cambia lo que cuesta hacer esa afirmación. Un
+atacante que da crédito a que hay mecanismos eficaces en circulación está dando
+crédito a que mentir no es la única herramienta de la víctima, y un titular con
+alternativas reales tiene menos motivo para echar mano de una mentira.</p>
+<p>Así que un diseño limpio según Kerckhoffs mejora la posición justo de aquellas
+negativas oscuras que fue construido para volver innecesarias. La seguridad por
+oscuridad sigue siendo insostenible como defensa primaria. No le da igual qué
+diseño acompaña.</p>
+<hr />
+<p><em>La clasificación, la documentación de los fabricantes y el argumento del bien
+común están desarrollados en</em>
+<a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><strong><em>The Denial Spiral</em></strong></a><em>, acceso
+abierto, sin registro. Su acompañante,</em>
+<a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><strong><em>The Deadly Race</em></strong></a><em>, trata de lo que
+pasa una vez que el atacante ya está en el cuarto: un decomiso que deja un camino
+viable pero inconcluso convierte un robo en una carrera, y le pone precio a tu
+eliminación.</em></p>
+<p><em>Cada cita de fabricante de arriba viene de documentación pública, enlazada en el
+paper. Si leí mal una función, o si una página cambió, dímelo y lo corrijo en
+público.</em></p>
+<hr />
+<p><strong>Si valió tu tiempo.</strong> Mándaselo a alguien que entrega un PIN de coacción. Una ⭐
+en <a href="https://github.com/Yuri-SVB/Great-Wallet">Great Wall</a>,
+<a href="https://github.com/Yuri-SVB/great-wall-docs">la investigación</a> o
+<a href="https://github.com/Yuri-SVB/great-wall-posts">estos textos</a> no cuesta nada y hace
+más fácil encontrar el trabajo. Y si quieres financiarlo,
+<a href="https://github.com/Yuri-SVB/support">support</a> acepta ⚡ Lightning y on-chain, sin
+registro, sin niveles, sin esperar nada de vuelta.</p>
+</article>
+
+<footer>
+  <p>Free to read, translate and republish. Every figure comes from a
+  press-sourced registry with survivorship bias, coded by headline rather than
+  measured; shares overlap and the fatality share is a floor. A number without
+  its caveat is a bug.</p>
+  <p>The arguments are developed in
+  <a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><em>The Deadly Race</em></a> and
+  <a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><em>The Denial Spiral</em></a>,
+  both open access. Source for this post:
+  <a href="https://github.com/Yuri-SVB/great-wall-posts/tree/main/posts/002-obscurity-the-clearest-problem">great-wall-posts</a>.</p>
+  <p><a href="../../audit/">Self-custody audit</a> ·
+     <a href="../../course/">The course</a> ·
+     <a href="../../">Home</a></p>
+</footer>
+
+</div>
+</body>
+</html>

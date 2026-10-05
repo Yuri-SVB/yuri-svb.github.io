@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<rect x="430" y="150" width="340" height="230" fill="#fcfcfb" stroke="#0b0b0b" stroke-width="3"/>
+<text x="600" y="240" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" fill="#52514e">your exchange</text>
+<text x="600" y="285" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="38" font-weight="600" fill="#0b0b0b">KYC record</text>
+<path d="M 600 400 L 600 470 M 570 440 L 600 472 L 630 440" fill="none" stroke="#8a8781" stroke-width="4" stroke-linecap="round"/>
+<rect x="330" y="500" width="540" height="150" rx="10" fill="#e9e6df" stroke="#0b0b0b" stroke-width="3"/>
+<rect x="420" y="560" width="360" height="12" fill="#0b0b0b"/>
+<text x="600" y="625" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" letter-spacing="3" fill="#52514e">DELETE MY DATA</text>
+<path d="M 600 670 L 600 740 M 570 710 L 600 742 L 630 710" fill="none" stroke="#8a8781" stroke-width="4" stroke-linecap="round"/>
+<rect x="430" y="760" width="340" height="200" fill="#fcfcfb" stroke="#eb6834" stroke-width="3"/>
+<text x="600" y="840" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" fill="#52514e">your exchange</text>
+<text x="600" y="890" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="38" font-weight="600" fill="#0b0b0b">KYC record</text>
+<text x="600" y="1045" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="72" fill="#0b0b0b">You can't un-leak a leak.</text>
+<text x="600" y="1095" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" fill="#52514e">Records held by third parties can be neither audited nor revoked.</text>
+</svg>

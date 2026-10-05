@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<text x="80" y="76" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" letter-spacing="4" fill="#8a8781">TWO WAYS TO CLEAR THE BAR, AND NO THIRD</text>
+
+<rect x="80" y="130" width="500" height="330" fill="#fcfcfb" stroke="#0b0b0b" stroke-width="4"/>
+<text x="110" y="196" font-family="Georgia,'Times New Roman',serif" font-size="38" fill="#0b0b0b">Remove the race</text>
+<line x1="110" y1="222" x2="330" y2="222" stroke="#eb6834" stroke-width="4"/>
+<text x="110" y="278" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" fill="#0b0b0b">After the seizure there is no</text>
+<text x="110" y="312" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" fill="#0b0b0b">feasible path at all. Nothing to</text>
+<text x="110" y="346" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" fill="#0b0b0b">hand over, nothing to finish.</text>
+<text x="110" y="408" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" fill="#52514e">Custody stays</text>
+<text x="110" y="440" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" fill="#0b0b0b">yours alone.</text>
+
+<rect x="620" y="130" width="500" height="330" fill="#f0ede6" stroke="#0b0b0b" stroke-width="4"/>
+<text x="650" y="196" font-family="Georgia,'Times New Roman',serif" font-size="38" fill="#0b0b0b">Remove the reach</text>
+<line x1="650" y1="222" x2="892" y2="222" stroke="#eb6834" stroke-width="4"/>
+<text x="650" y="278" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" fill="#0b0b0b">The party who wins the race is</text>
+<text x="650" y="312" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" fill="#0b0b0b">a remote delegate. Killing you</text>
+<text x="650" y="346" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" fill="#0b0b0b">gains him nothing.</text>
+<text x="650" y="408" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" fill="#52514e">Custody becomes</text>
+<text x="650" y="440" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" fill="#0b0b0b">shared.</text>
+
+<text x="80" y="536" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" fill="#52514e">The exit on the right closes if the delegate is in the room with you.</text>
+<text x="80" y="574" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" fill="#52514e">It also rests on that delegate refusing you when you genuinely need them.</text>
+
+<text x="80" y="648" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="21" fill="#52514e">A structural claim about what clears the bar, not a measurement, and not a count of who uses which.</text>
+<text x="80" y="682" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="21" fill="#52514e">Geographic setups look like the left box and behave like the right one, over physical ground.</text>
+<text x="80" y="726" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="19" fill="#8a8781">doi.org/10.5281/zenodo.22018891</text>
+</svg>

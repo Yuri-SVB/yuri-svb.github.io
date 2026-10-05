@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El caso Balland — una vergüenza para el credo de la autocustodia</title>
+<meta name="description" content="En enero de 2025 unos hombres sacaron a David Balland de su casa. Balland cofundó Ledger, que fabrica hardware wallets, lo que significa que, de todas las personas del mundo, él estaba entre las que con más probabilidad habían pensado con cuidado cómo guardaban su bitcoin.">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <img class="mark" src="../../assets/mark.png" alt="">
+  <h1>El caso Balland — una vergüenza para el credo de la autocustodia</h1>
+  <p class="role"><time datetime="2026-10-05">2026-10-05</time></p>
+  <nav class="lang"><a href="../">All posts</a> · <a href="index.html">English</a> · <a href="pt-BR.html">Português</a> · Español · <a href="fr.html">Français</a> · <a href="it.html">Italiano</a></nav>
+</header>
+
+<hr>
+
+<article>
+<p align="center"><img src="assets/cover-1200x675.webp" alt="Una mano sosteniendo unas pinzas viejas casi a oscuras, con una luz dura cruzándole los nudillos, junto a un panel que dice The Balland Case, una vergüenza para el credo de la autocustodia. El panel avisa que la imagen es meramente ilustrativa: una foto preparada de una herramienta de mano, no su caso, no los atacantes, y ninguna afirmación sobre qué se usó." width="680"></p>
+
+<p>En enero de 2025 unos hombres sacaron a David Balland de su casa. Balland
+cofundó Ledger, que fabrica hardware wallets, lo que significa que, de todas las
+personas del mundo, él estaba entre las que con más probabilidad habían pensado
+con cuidado cómo guardaban su bitcoin.</p>
+<p>Se llevaron también a su esposa. Le cortaron un dedo y lo mandaron, para dejar
+claro que la exigencia iba en serio. Lo liberó una unidad de élite de la policía
+nacional francesa. A su esposa la liberaron más o menos un día después. Para
+entonces ya se había pagado un rescate, no Balland sino un asociado suyo, y la
+mayor parte se recuperó después porque parte del dinero pasó por una stablecoin
+centralizada cuya emisora podía congelarla a petición. Alrededor del 5% nunca
+volvió.</p>
+<p>Una cosa de ese párrafo es verificable de forma independiente. Un congelamiento
+de emisora deja registro público. El resto, es decir quién pagó, cuánto y cómo
+fue la recuperación, se apoya en el relato de las partes, y yo no tengo manera
+de auditarlo.</p>
+<h2>Qué lo sacó en realidad</h2>
+<p>Quédate un momento con la forma del asunto, no con el horror.</p>
+<p>A un defensor profesional de la autocustodia lo atacaron igual, con
+presumiblemente el mejor arreglo de autocustodia que el dinero y la pericia
+pueden armar. La riqueza no lo impidió. La notoriedad no lo impidió. La pericia
+justo en este problema, de la que casi nadie más dispone, no lo impidió.</p>
+<p>Y cuando terminó, las dos cosas que deshicieron el daño fueron <strong>una unidad de
+élite de la policía estatal</strong> y <strong>una emisora centralizada con botón de
+congelar</strong>. Ninguna de las dos forma parte del credo. Las dos son, la mayoría de
+los días, cosas que el credo existe para esquivar.</p>
+<p>Eso es lo que hace que el caso valga la pena escribirlo, y también por qué
+incomoda. Si defiendes la autocustodia, como yo, este es el caso que tienes que
+poder mirar sin apartar la vista.</p>
+<p><strong>La lección no es que Balland se equivocó.</strong> Quiero ser exacto en esto, porque
+el reflejo de este ambiente es leer cada incidente como una historia de
+competencia. Debió usar multisig, debió mudarse, debió quedarse más callado.
+Nada de lo publicado sugiere que hiciera algo mal, y el argumento de aquí no
+necesita que lo hiciera.</p>
+<h2>Qué alcanzaba su arreglo y qué no</h2>
+<p>Nada del arreglo de autocustodia de Balland tuvo que ver con que unos hombres
+aparecieran en su casa. La elección de objetivo corre sobre lo que se ve desde
+fuera: un nombre, una empresa, un cargo público, una base de datos que alguien
+filtró. Ninguna configuración de cartera toca nada de eso.</p>
+<p>Tampoco fijó cuánto tiempo se quedaron, y aquí es donde los que hacemos este
+argumento lo vendemos por más de lo que vale. Arranca por la imposibilidad en la
+que se apoyan los dos papers. No puedes probar que olvidaste, así que un atacante
+dentro del cuarto da por hecho que hay más, y lo da por hecho sin importar qué
+construiste ni qué le digas. De ahí en adelante la duración del encuentro es su
+aritmética y no la tuya: una hora más le vale o no le vale el riesgo que cuesta.
+Un protocolo es un conjunto de objetos virtuales y de reglas de uso. No detiene
+una llave inglesa.</p>
+<p>Lo que sí se le puede exigir a un diseño de autocustodia empieza antes que todo
+eso, en describir al atacante con honestidad. El modelo con el que trabajan los
+papers pone una cláusula por delante, antes de cualquier cosa sobre cómputo o
+presupuesto: él sabe cómo funciona tu arreglo. Leer el manual es gratis y el
+manual es público, así que da por hecho que lo leyó. Ese es el terreno del que
+trata <a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><strong><em>The Denial Spiral</em></strong></a>,
+y ahí es donde falla una categoría entera de producto, porque los señuelos, los
+PIN de coacción y las historias ensayadas necesitan todos que él no lo haya
+leído. La obscuridad sí funcionó en su momento, y de eso trata
+<a href="https://github.com/Yuri-SVB/great-wall-posts/tree/main/posts/003-the-window-has-closed">un texto anterior de esta serie</a>:
+hubo una ventana en la que casi nadie te buscaba y nadie podía distinguirte entre
+la multitud, y ahí dentro quedarse callado era casi una defensa completa. Vale
+decir por qué la cultura se agarra de eso en lugar de burlarse de quien lo
+hace. Pero el conocimiento se
+difunde (Kerckhoffs), y un modelo de negocio criminal que paga se replica
+(Mises). La ventana se cerró y no va a volver a abrirse.</p>
+<p>Modélalo así y aparece algo desagradable. Algunos arreglos, corriendo contra un
+atacante que sabe exactamente qué son, le dan una razón para matarte que de otro
+modo no habría tenido. Eso es lo que
+<a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><strong><em>The Deadly Race</em></strong></a> pone en precio: cuando
+el camino que él tiene todavía sirve pero no está terminado, quien salió libre es
+un competidor por el mismo dinero, y a un competidor al alcance sale más barato
+quitarlo que ganarle la carrera. A Balland lo liberaron vivo, así que ese
+movimiento nunca llegó aquí. El punto es que algunos diseños lo fabrican, y el
+nombre que The Deadly Race le da a esa clase es <em>peor que inútil</em>. La expresión es
+estrecha a propósito: un esquema que entrega todo limpiamente le gana a uno que
+deja un hueco. Antes de intentar ayudar, no empeores las cosas.</p>
+<p>Solo con esos dos en la mano vale la pena hacer la pregunta con la que todos
+empiezan, que es cuánto del bulto se puede poner fuera de alcance, y la segunda
+mitad de esa pregunta es la parte que se salta: sin comprar esa reducción al
+precio de una carrera.</p>
+<p>Lo que eso compra es más chico que la versión que la gente quiere, y acertarle al
+tamaño es lo que le queda a este texto.</p>
+<p>Nada de esto es un argumento contra la autocustodia, y sería uno barato si lo
+fuera. Es un argumento sobre el orden en que se hacen las cosas en autocustodia:
+describe al atacante como alguien que ya leyó tu manual, fíjate en cuáles de las
+cosas que podrías construir le pondrían precio a tu propia muerte, y solo
+entonces empieza a preguntar cuánto puedes poner fuera de alcance.</p>
+<h2>Por qué ninguna búsqueda termina</h2>
+<p>Los dos papers razonan sobre un atacante deliberadamente poco favorecedor. Sabe
+cómo funciona tu arreglo, tiene un presupuesto de tiempo y de riesgo, y da por
+hecho que siempre hay más. Llámalo el atacante idealizado. Un diseño tiene que
+sobrevivirle, porque un diseño que solo le sobrevive a un adversario descuidado
+no le sobrevivió a nada.</p>
+<p>Para él hay una pregunta que no puede responder y no puede dejar de hacer.</p>
+<p>¿Hay otra copia?</p>
+<p><strong>No puedes probar que olvidaste.</strong> Tampoco puedes probar que no existe un
+respaldo, y la razón no es que el atacante sea tonto o sádico. Es que lo que
+tendría que descartar es diminuto y puede estar en cualquier parte. Una tarjeta
+SD. Notas esteganográficas en un libro del librero. El usuario y la contraseña
+memorizados de una cuenta de correo con un archivo cifrado adentro. Cualquiera
+de esas basta para reconstituir el acceso, y ninguna se descarta revolviendo una
+casa.</p>
+<p>Así que supone que existe una, digas lo que digas y como lo digas. Esa es la
+posición racional, no la paranoica.</p>
+<p>Sigue un paso más y llegas a un sitio del que The Deadly Race no huye. Para
+estar seguro de que no queda ninguna copia, tendría que establecer qué está y
+qué no está en tu memoria. Orwell le dio su medida al último lugar privado:
+<em>nada era tuyo salvo los pocos centímetros cúbicos dentro de tu cráneo.</em> Un
+atacante capaz de leer eso excedería el supremo literario del poder de
+vigilancia, que concedió el cráneo de forma expresa.</p>
+<p>Ese es el final del camino en el que el diseño te pone, para ese atacante.
+Guarda la salvedad, porque trabaja más de lo que parece.</p>
+<h2>A quien se llevan no siempre es quien guarda</h2>
+<p>Pagó un asociado. No Balland, y no desde el arreglo del propio Balland. Ese
+detalle se pasa por alto fácil y es el segundo argumento del caso.</p>
+<p>Codificado a mano desde el registro de Jameson Lopp: en <strong>12 de 351 incidentes,
+3.4%</strong>, la persona a la que se llevaron no era tenedora de nada sino un familiar
+tomado para presionar a alguien. Un padre o madre, un cónyuge, un hijo adulto. El
+filtro levantó dieciséis candidatos y cuatro se descartaron al leerlos, incluido
+uno donde "hijo de" resultó nombrar a un autor y no a una víctima, así que los
+doce están auditados y no emparejados por palabra clave.</p>
+<p>Dos cosas de ese subconjunto importan más que su tamaño.</p>
+<p>Es <strong>reciente y se está concentrando</strong>. Once de los doce caen en 2023 o después,
+y nueve están en Francia, donde los incidentes registrados pasaron de cerca de
+uno al año hasta 2024 a 22 en 2025 y 34 para agosto de 2026. Sea cual sea la
+parte de esa subida que es incidencia real y no la prensa francesa poniendo
+atención, esto no es dispersión histórica. La táctica se está adoptando.</p>
+<p>Y 3.4% es un <strong>piso</strong>, no una estimación. La codificación lee un titular de una
+línea, así que un incidente que por casualidad no menciona a un familiar no es
+prueba de que no hubiera ninguno. El número solo puede quedarse corto.</p>
+<h2>Qué acota eso</h2>
+<p>El arreglo delegado es una respuesta real a la coacción, y lo honesto es decirlo
+antes de quitarle nada. También es el punto donde la autocustodia deja de ser
+autocustodia sin hacer ruido. Pon el poder de liberar los fondos en alguien
+lejano que te va a negar, y un atacante en tu sala no tiene a quién le convenga
+lastimar. Pasa el criterio. El
+<a href="https://zenodo.org/doi/10.5281/zenodo.22018891">texto acompañante</a> lo dice con todas
+sus letras.</p>
+<p>Lo que este caso pone en precio es la letra chica. Ese arreglo funciona solo
+mientras el delegado esté de verdad fuera de alcance, y el delegado que una
+persona real nombra es un cónyuge, un padre, un hijo adulto, un asociado de
+confianza. Que es exactamente la lista que este subconjunto muestra siendo
+tomada.</p>
+<p>Así que un delegado alcanzable no es un segundo corredor. Es una segunda
+víctima.</p>
+<p>La ruta no queda refutada, queda acotada: necesita una inalcanzabilidad
+<strong>estructural</strong>, no supuesta, y la mayoría de quienes creen tenerla solo la
+supusieron. Pregúntate a quién nombrarías de verdad, y luego si a esa persona la
+podría encontrar en una tarde alguien que ya te encontró a ti.</p>
+<h2>El atacante del modelo no es el atacante del cuarto</h2>
+<p>El atacante idealizado nunca para, y para eso sirve exactamente. Los reales paran
+todo el tiempo, por razones ordinarias: un presupuesto, un riesgo de que lo
+agarren que crece cada hora, una aritmética sobre la próxima hora y no sobre el
+premio entero.</p>
+<p>Un atacante real también puede ser <em>informado</em>, cosa que el idealizado nunca
+necesita. Tres cosas que puede llegar a saber, y ninguna le exige creerle a la
+persona que tiene enfrente:</p>
+<ol>
+<li><strong>Que existe una construcción así.</strong> No es una afirmación de la víctima, es un
+   hecho público sobre lo que hay disponible para construir.</li>
+<li><strong>Que quien guarda mucho plausiblemente la usa</strong>, y sus familiares también,
+   para el grueso de lo que tienen entre todos.</li>
+<li><strong>Entonces el valor esperado de una hora más baja</strong>, y con él el valor
+   esperado de siquiera empezar.</li>
+</ol>
+<p>Eso no es una promesa, y la salvedad sigue en pie: alguien con esa fortuna tiene
+una porción más chica, más suelta, menos guardada, y en la aritmética del
+atacante esa sola ya puede cubrir el riesgo del delito. Lo que se mueve es la
+aritmética sobre el grueso. Un Balland hipotético cuya autocustodia pasara los
+tres todavía podría haber sido elegido, todavía podría haber sido levantado, y
+sus familiares todavía podrían haber pagado lo que estuviera al alcance. Lo que
+cambiaría es lo que sus atacantes podrían acabar constatando: que el resto está
+fuera de alcance operativo como propiedad de la construcción, y no como un cuento
+que él les está echando.</p>
+<p>Diseña para el atacante que nunca para. La disuasión pasa por el que sí para.</p>
+<h2>Qué queda</h2>
+<p>Frente a un atacante decidido y dispuesto a retenerte mucho rato, las opciones
+que hoy se venden se reducen a dos: un rescate estatal y una emisora dispuesta a
+congelar. Las dos funcionaron aquí. Ninguna es autocustodia, y ninguna es algo
+que puedas pedir cuando lo necesitas. Un credo cuyo plan B son las instituciones
+ajenas no es la cosa autosuficiente que venden.</p>
+<p>La alternativa que vale la pena construir no es una recuperación mejor después
+del hecho. Es quitar la palanca antes: ningún aparato listo para decomisar,
+ningún token que funcione como rehén, ningún delegado en posición de pagar. Si
+eso es alcanzable es la afirmación que los papers hacen y defienden, y deberías
+leerlos con escepticismo en vez de aceptarlo de una entrada de blog.</p>
+<p>Balland recuperó casi todo su dinero y conservó la vida. No recuperó el dedo. Esa
+es la parte del balance que nadie congela.</p>
+<hr />
+<p><em>El caso, el subconjunto de víctimas interpuestas, la auditoría detrás y el
+argumento de la duración están en</em>
+<a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><strong><em>The Denial Spiral</em></strong></a><em>, acceso
+abierto, sin registro. Su acompañante,</em>
+<a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><strong><em>The Deadly Race</em></strong></a><em>, es donde la
+imposibilidad que deja una negativa sin verificación, y la prueba que sale de
+ella, se desarrollan como se debe.</em></p>
+<p><em>Detalles del caso de</em> <a href="https://www.dlnews.com/articles/regulation/ledger-cofounder-david-balland-and-wife-kidnapped-in-france/"><em>DL News</em></a><em>,
+<a href="http://archive.today/2026.09.03-171044/https://www.dlnews.com/articles/regulation/ledger-cofounder-david-balland-and-wife-kidnapped-in-france/">archivado</a>.
+Conteos de incidentes del</em> <a href="https://github.com/jlopp/physical-bitcoin-attacks"><em>registro de Jameson Lopp</em></a><em>,
+una muestra de prensa que se pierde lo no reportado. Nada de aquí va más allá de
+lo publicado.</em></p>
+<hr />
+<p><strong>Si valió tu tiempo.</strong> Mándaselo a quien te dijo que una hardware wallet era el
+final del problema. Una ⭐ en <a href="https://github.com/Yuri-SVB/Great-Wallet">Great Wall</a>,
+<a href="https://github.com/Yuri-SVB/great-wall-docs">la investigación</a> o
+<a href="https://github.com/Yuri-SVB/great-wall-posts">estos textos</a> no cuesta nada y hace
+más fácil encontrar el trabajo. Y si quieres financiarlo,
+<a href="https://github.com/Yuri-SVB/support">support</a> acepta ⚡ Lightning y on-chain, sin
+registro, sin niveles, sin esperar nada de vuelta.</p>
+</article>
+
+<footer>
+  <p>Free to read, translate and republish. Every figure comes from a
+  press-sourced registry with survivorship bias, coded by headline rather than
+  measured; shares overlap and the fatality share is a floor. A number without
+  its caveat is a bug.</p>
+  <p>The arguments are developed in
+  <a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><em>The Deadly Race</em></a> and
+  <a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><em>The Denial Spiral</em></a>,
+  both open access. Source for this post:
+  <a href="https://github.com/Yuri-SVB/great-wall-posts/tree/main/posts/005-the-balland-case">great-wall-posts</a>.</p>
+  <p><a href="../../audit/">Self-custody audit</a> ·
+     <a href="../../course/">The course</a> ·
+     <a href="../../">Home</a></p>
+</footer>
+
+</div>
+</body>
+</html>

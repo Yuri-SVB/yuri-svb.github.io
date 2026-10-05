@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Does Hiding Your Bitcoin Still Protect You?</title>
+<meta name="description" content="Hiding your bitcoin is the standard advice for anyone afraid of being kidnapped over it, and all three parts of it are bets on what the criminal will believe. Brazil records nine kidnappings for every armed robbery, on a small and press-sourced sample.">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <img class="mark" src="../../assets/mark.png" alt="">
+  <h1>Does Hiding Your Bitcoin Still Protect You?</h1>
+  <p class="role"><time datetime="2026-09-22">2026-09-22</time></p>
+  <nav class="lang"><a href="../">All posts</a> · English · <a href="pt-BR.html">Português</a> · <a href="es.html">Español</a> · <a href="fr.html">Français</a> · <a href="it.html">Italiano</a></nav>
+</header>
+
+<hr>
+
+<article>
+<p align="center"><img src="assets/capa-1200x675.webp" alt="A man holds a sieve up to block out the sun, and the light pours straight through the mesh. It is the Brazilian idiom for trying to hide what everyone can already see." width="680"></p>
+
+<p><strong>The standard advice for anyone afraid of being kidnapped over bitcoin comes in
+three parts: tell nobody, deny it if asked, and keep a <em>decoy</em> to hand over.</strong></p>
+<p><strong>All three are bets on what the criminal will <em>believe</em>. And not one of them has
+ever been assessed as what it is: a security mechanism whose entire strength rests
+on the adversary's ignorance.</strong></p>
+<p>This piece argues that hiding bitcoin isn't merely ineffective. It's <strong>self-destructive at
+scale</strong>, and the bill lands on people who never took the advice.</p>
+<hr />
+<h2>Hiding bitcoin has a name, a number and a rap sheet</h2>
+<p>The vocabulary first.</p>
+<p>A <em>decoy</em>, or bait wallet. In Brazil we call it "the mugger's money", and we know
+it well: a smaller amount, set aside on purpose to be handed over in a robbery.</p>
+<p>In security engineering the whole family of these tactics is cataloged. It's
+called <em>Reliance on Security Through Obscurity</em>, filed as
+<a href="https://cwe.mitre.org/data/definitions/656.html">CWE-656</a>. In any other domain
+that's a design defect. In bitcoin custody, it's the consensus.</p>
+<h3>Hiding bitcoin is condescending by construction</h3>
+<p>This paradigm, which in protocol design is called <strong>obscurity</strong>, is intrinsically
+condescending. It assumes the thief isn't mentally capable of reading the same
+manuals, watching the same tutorials and taking the same courses as his victims.</p>
+<p>If you can learn a procedure on the internet, so can a thief. And he'll certainly
+know the procedure exists.</p>
+<hr />
+<h2>Brazil sits in the registry's worst quadrant</h2>
+<p>Jameson Lopp has kept a <a href="https://github.com/jlopp/physical-bitcoin-attacks">public registry of physical attacks on bitcoin
+holders</a> for years, the "$5
+wrench attacks". I coded all 351 incidents in it by modality. The country
+breakdown isn't uniform: it varies by an order of magnitude.</p>
+<table>
+<thead>
+<tr>
+<th>Jurisdiction</th>
+<th style="text-align: right;">Incidents</th>
+<th style="text-align: right;">Kidnapping</th>
+<th style="text-align: right;">Armed robbery</th>
+<th style="text-align: right;">K:R ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Brazil</strong> <em>(small n)</em></td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">75.0%</td>
+<td style="text-align: right;">8.3%</td>
+<td style="text-align: right;"><strong>9.0</strong></td>
+</tr>
+<tr>
+<td>France</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">57.4%</td>
+<td style="text-align: right;">8.2%</td>
+<td style="text-align: right;">7.0</td>
+</tr>
+<tr>
+<td><em>All incidents</em></td>
+<td style="text-align: right;">351</td>
+<td style="text-align: right;">35.0%</td>
+<td style="text-align: right;">22.8%</td>
+<td style="text-align: right;">1.5</td>
+</tr>
+<tr>
+<td>United States</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">20.3%</td>
+<td style="text-align: right;">33.9%</td>
+<td style="text-align: right;">0.6</td>
+</tr>
+<tr>
+<td>Russia <em>(small n)</em></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">30.0%</td>
+<td style="text-align: right;">50.0%</td>
+<td style="text-align: right;">0.6</td>
+</tr>
+</tbody>
+</table>
+<h3>Nine kidnappings for every robbery</h3>
+<p>Read the right-hand column. In the United States the typical attack is a robbery:
+gun drawn, immediate transfer, minutes on scene.</p>
+<p>In Brazil the proportion inverts. <strong>For every armed robbery on record, nine
+kidnappings.</strong>. The Brazilian attack isn't an event of minutes. It's an event of
+hours or days, with the victim under the criminal's control throughout.</p>
+<h3>The caveat comes with it, and it's serious</h3>
+<p>The registry is a press-sourced sample, <code>n=12</code> for Brazil supports nothing on its
+own, and the coding is by headline keyword, not by measured duration. Treat the
+Brazil row as directional.</p>
+<p>The comparison that actually carries weight is France against the United States:
+two subsets of the same size (61 and 59) with inverted compositions. Composition
+does vary with local conditions, and Brazilian local conditions are known to
+anyone who lives here.</p>
+<p>This matters because <strong>the whole promise of hiding bitcoin depends on the attack being
+short</strong>. A decoy works if the criminal takes the R$8,000 and leaves. It has no
+answer to the next question, asked on the third day, in captivity.</p>
+<hr />
+<h2>What happens when everyone is trained to deny</h2>
+<p>Here's the mechanism, and it's economic before it's cryptographic.</p>
+<h3>A denial's credibility is a common resource</h3>
+<p>It's produced by the set of all holders and consumed by each one who denies. While
+denial is rare, denying carries information: the criminal updates his belief and
+your odds of being released go up.</p>
+<p>Once denial becomes the expected script, once every channel, every course, every
+Telegram group teaches the same line, <strong>a denial stops carrying information</strong>.</p>
+<p>An interrogation that opens with "I don't have anything" gives the criminal no
+update in your favor. And his rational continuation at that point isn't to let
+you go. It's to press.</p>
+<p>The individually rational response to that environment is to hide better and
+rehearse more. Which <strong>depletes the resource further, for everyone</strong>.</p>
+<p>I've called this the <strong>Denial Spiral</strong>, and its cost is a classic externality: it
+falls on whoever needs to be believed. Including people using an arrangement that
+doesn't depend on lying. Including people who honestly <strong>hold no bitcoin at all</strong>,
+and the registry has cases like that.</p>
+<h3>The market sells the depletion as a product</h3>
+<p>Various self-custody consultancies, courses and tutorials list, among their paid
+services, setting up decoys with credibility training.</p>
+<p>So: you pay to become fluent in a denial that the criminal already discounts,
+precisely because it's taught and sold. The remedy degrades the very thing it
+sells, and not only for the customer.</p>
+<hr />
+<h2>The worse problem: you cannot prove you forgot</h2>
+<p>There's a second failure, and it's worse, because it's about the outcome rather
+than the duration.</p>
+<p>Start from a simple, inescapable fact: <strong>nobody can prove they don't know
+something.</strong> Knowing is demonstrable; <em>not</em> knowing isn't. You have no way to prove
+you forgot the passphrase, or that no backup exists anywhere.</p>
+<h3>The Deadly Race</h3>
+<p>Now consider any scheme that, after your device is taken, leaves the criminal with
+a <strong>feasible but unfinished</strong> path to the money: a timelock, a delegate-held
+recovery, a vault with a delay, a key that still has to be cracked.</p>
+<p>You're released. And you can't prove you kept no usable copy.</p>
+<p>What exists from that point is a <strong>race</strong> between you and him for the same balance.
+And a race against a competitor who is within arm's reach creates something no
+wallet whitepaper mentions: <strong>a material incentive to eliminate you.</strong> Not out of
+cruelty. Out of arithmetic. Taking the other racer off the track is the cheapest
+move available.</p>
+<p>I've called this the <strong>Deadly Race</strong>. In the registry, at least 4.6% of incidents
+(16 of 351) involve a victim killed, and that figure is a <strong>floor</strong>, not an
+estimate. A homicide tends to be reported as a homicide, not as "attack on a
+bitcoin holder". The outcome the argument predicts is documented in practice.</p>
+<h3>Why the decoy is a gray-zone machine</h3>
+<p>The design criterion that falls out of this is blunt: <strong>a coercion-resistant
+custody scheme can admit only two outcomes. The attack clearly works, or the
+attack clearly fails. Never a race.</strong></p>
+<p>The gray zone is exactly where the incentive to murder lives. I've called this the
+<strong>No-Gray-Area Principle</strong>.</p>
+<p>Notice what that does to the decoy. It is, by construction, a gray-zone machine:
+the criminal leaves suspecting there's more, with no way to settle the suspicion.
+It's the worst possible place to be.</p>
+<hr />
+<h2>A Brazilian case that closes the argument</h2>
+<p>Porto Velho, October 2019. A gang kidnaps
+<a href="https://archive.is/jyzcJ">Arcilio Nogueira de Souza</a>, ties the victim to a tree
+and beats him for hours. The criminals <strong>took nothing</strong>. The phone gave no access
+to the funds.</p>
+<p>That case is the whole argument in one paragraph. The funds being inaccessible
+<em>did not end the attack</em>. It <strong>prolonged</strong> it.</p>
+<p>The scheme "worked" in the sense the industry measures, the money didn't move, and
+the person spent hours tied to a tree being beaten, because outside his head
+there was nothing that could settle the criminal's doubt.</p>
+<p>This is why I separate the two mechanisms. The Deadly Race prices the <strong>outcome</strong>.
+The Denial Spiral prices the <strong>duration</strong>. An arrangement can be innocent of one
+and guilty of the other, and most of what's sold today is guilty of both.</p>
+<hr />
+<h2>What's left, if hiding bitcoin isn't a defense</h2>
+<p>Three honest routes remain, and it's worth knowing which one you're on.</p>
+<h3>1. Physical</h3>
+<p>Geographic dispersion, vaults, multisig with distant custody. It works, and it
+reduces bitcoin's security to "how good is the vault". Bitcoin becoming <strong>gold
+with extra steps</strong>, at a cost that scales with the defense. For the vast majority,
+it's out of reach.</p>
+<h3>2. Delegated</h3>
+<p>Someone beyond the criminal's reach holds the missing piece: an exchange,
+co-custody, third-party recovery. It clears the criterion, but it swaps the
+premise: custody stops being individual. <em>Not your keys.</em> And the route <strong>closes</strong>
+if the delegate lives near you.</p>
+<h3>3. Tacit</h3>
+<p>The secret was never on the device, and can't be dictated even under torture,
+because it's perceptual recognition rather than a phrase. Seizing the hardware
+yields nothing feasible. <strong>Clear failure</strong>, no racer left over, custody still
+individual.</p>
+<p>The third route is where I work, and the project is called <strong>Great Wall</strong>. Here's
+the warning any honest text about it needs: <strong>the implementation is a prototype.
+Don't put your savings behind it yet.</strong></p>
+<p>When that changes it will be written down, with a date, in
+<a href="https://github.com/Yuri-SVB/support/blob/main/DELIVERED.md"><code>DELIVERED.md</code></a>, a
+file kept in git precisely so that "the work is progressing" is an auditable claim
+and not a promise.</p>
+<h3>The counterintuitive side effect</h3>
+<p>There's a nice side effect to this route: <strong>a public, non-obscure project improves
+the position of people who deny.</strong></p>
+<p>A criminal who believes an effective mechanism is in circulation is believing that
+lying isn't the victim's only available tool, and a victim with a real
+alternative has less reason to lie.</p>
+<p>Hiding remains bad as a primary defense. But which arrangement it accompanies is
+not a matter of indifference.</p>
+<hr />
+<h2>What I sell, and what I don't</h2>
+<p><strong>I don't sell software.</strong> Great Wall, BTC-D20, BIP-450 and the papers are MIT or
+Apache-2.0, and that doesn't change: no "pro" version, no feature unlocked by
+payment, no priority queue for donors.</p>
+<p>It's written down in the <a href="https://github.com/Yuri-SVB/support">support repository</a>,
+and it's written there because a promise in an article is worth nothing and a
+promise in git has a date.</p>
+<h3>I do sell self-custody consultancy</h3>
+<p>It's a service, and the service is this: I look at the arrangement you already have,
+hardware wallet through passphrase, multisig, decoy, inheritance plan, whatever
+there is, and answer four questions in a closed report:</p>
+<ol>
+<li>Does your security rest on a <strong>secret trick</strong>? Does it depend on the attacker
+   not knowing what you do, and how you do it?</li>
+<li>Once your devices and secrets are seized, could the attacker spend <strong>right
+   away</strong>, or only <strong>eventually</strong>? "Eventually" means you're still a racer.</li>
+<li>Is your custody <strong>strictly individual</strong>? Can anyone else do something that
+   stops you reaching your own coins?</li>
+<li>Does it depend on <strong>particular objects in particular places</strong>? And do you own
+   those places?</li>
+</ol>
+<p>It isn't product sales: in most audits the recommendation is to adjust what already
+exists, and in some the verdict is that it's reasonable. What I won't do is build a
+decoy with denial training, for the entire argument above.</p>
+<p>Contact: <strong>yuri@t3infosecurity.com</strong>.</p>
+<h3>And if you don't want to buy anything</h3>
+<p>The papers are free and behind no signup:
+<a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><em>The Deadly Race</em></a> (the race and the
+criterion) and <a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><em>The Denial Spiral</em></a> (the
+spiral, the classification of obscure products on the market, and the registry
+coding method).</p>
+<p>New incident data goes to <a href="https://github.com/jlopp/physical-bitcoin-attacks">Lopp's registry</a>
+rather than into a database of mine, because that information is a public asset and
+belongs to everyone, including whoever is next.</p>
+<p>If this was useful, <a href="https://github.com/Yuri-SVB/support">support lives here</a>.
+Lightning and on-chain, nothing expected in return and no signup.</p>
+<hr />
+<p><em>Yuri da Silva Villas Boas is an applied cryptographer, author of BIP-450 (Formosa)
+and of the Great Wall protocol. The two central claims in this article are
+developed formally in the papers cited, currently under academic review.</em></p>
+</article>
+
+<footer>
+  <p>Free to read, translate and republish. Every figure comes from a
+  press-sourced registry with survivorship bias, coded by headline rather than
+  measured; shares overlap and the fatality share is a floor. A number without
+  its caveat is a bug.</p>
+  <p>The arguments are developed in
+  <a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><em>The Deadly Race</em></a> and
+  <a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><em>The Denial Spiral</em></a>,
+  both open access. Source for this post:
+  <a href="https://github.com/Yuri-SVB/great-wall-posts/tree/main/posts/009-esconder-bitcoin-ainda-protege">great-wall-posts</a>.</p>
+  <p><a href="../../audit/">Self-custody audit</a> ·
+     <a href="../../course/">The course</a> ·
+     <a href="../../">Home</a></p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Obscuridade, o problema mais claro de que ninguém fala</title>
+<meta name="description" content="Quem já sentou numa disciplina de projeto de protocolos viu o princípio de Kerckhoffs lá pela segunda semana. É o que todo mundo sabe recitar. E esta comunidade, que discute seis horas se o RNG de uma carteira é confiável, entrega defesas contra coação física construídas em cima de segurança por obs">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <img class="mark" src="../../assets/mark.png" alt="">
+  <h1>Obscuridade, o problema mais claro de que ninguém fala</h1>
+  <p class="role"><time datetime="2026-10-05">2026-10-05</time></p>
+  <nav class="lang"><a href="../">All posts</a> · <a href="index.html">English</a> · Português · <a href="es.html">Español</a> · <a href="fr.html">Français</a> · <a href="it.html">Italiano</a></nav>
+</header>
+
+<hr>
+
+<article>
+<p align="center"><img src="assets/cover-1200x675.webp" alt="Duas pessoas num sofá, uma no laptop e outra lendo, as duas ocupadas, enquanto um elefante enorme de máscara de Guy Fawkes está sentado na sala atrás delas, sem que ninguém comente." width="680"></p>
+
+<p>Quem já sentou numa disciplina de projeto de protocolos viu o princípio de
+Kerckhoffs lá pela segunda semana. É o que todo mundo sabe recitar. E esta
+comunidade, que discute seis horas se o RNG de uma carteira é confiável, entrega
+defesas contra coação física construídas em cima de segurança por obscuridade, e
+elas falham na primeira página do manual.</p>
+<p>Nada sutil. Os próprios manuais dizem isso, e este texto é quase só citá-los.</p>
+<h2>O que Kerckhoffs realmente diz</h2>
+<p>Deixe o jargão de lado. Um sistema tem que continuar seguro quando o atacante
+sabe exatamente como ele funciona. Tudo menos a chave é público: o projeto, o
+software, o procedimento, o fato de o procedimento existir. Você julga um projeto
+pelo desempenho dele contra alguém que leu a mesma documentação que você.</p>
+<p>Isso não é pessimismo sobre atacantes. É uma admissão sobre publicação. No
+momento em que uma defesa chega ao consumidor, a descrição dela está num artigo
+de suporte, na língua do atacante, indexada, de graça.</p>
+<h3>Segurança por obscuridade tem número de catálogo</h3>
+<p>A família de táticas que quebra essa regra tem nome e número de arquivo.
+<em>Reliance on Security Through Obscurity</em>, catalogada como
+<a href="https://cwe.mitre.org/data/definitions/656.html">CWE-656</a>. Em qualquer outro
+domínio de software essa entrada é um defeito que se conserta. Na custódia de
+bitcoin é a recomendação consensual.</p>
+<p>E esse paradigma, que o projeto de protocolos chama de <strong>obscuridade</strong>, é
+intrinsecamente condescendente. Ele supõe que o ladrão não tem capacidade mental
+de ler os mesmos manuais, assistir aos mesmos tutoriais e fazer os mesmos cursos
+que as vítimas dele. Se dá para aprender um procedimento na internet, um ladrão
+também aprende, e com certeza vai saber que o procedimento existe.</p>
+<p>Mire na suposição, não em quem a carrega. As pessoas que entregam essas funções
+são engenheiros cuidadosos que erraram uma premissa. Acontece que é a premissa
+que sustenta o resto.</p>
+<h2>Três apostas no que o atacante vai acreditar</h2>
+<p>O conselho padrão vem em três partes: guarde em silêncio, negue se perguntarem,
+mantenha algo pequeno para entregar. Reescreva sem o tom tranquilizador e são três
+apostas sobre o estado mental de um adversário. Não três controles. Três palpites
+sobre o que outra pessoa vai pensar, feitos por quem tem menos condições de
+conferir.</p>
+<p>Um controle funciona quando o atacante sabe dele. É essa a distinção inteira, e
+todo mecanismo abaixo falha desse lado dela.</p>
+<h2>A classe, nas palavras dos próprios fabricantes</h2>
+<p>Vou citar documentação em vez de caracterizá-la, porque a classificação faz o
+trabalho sozinha e caracterizar convida uma discussão sobre intenção de que
+ninguém precisa.</p>
+<h3>O PIN que apaga, e o backup que ele pressupõe</h3>
+<p>A Jade, da Blockstream, tem um PIN alternativo que, nas palavras da central de
+ajuda, "automatically delete[s] the encrypted wallet information from Jade if
+entered". Ele é apresentado como "especially useful in the event of a physical
+threat, as you can provide this PIN to an attacker". Digite e o aparelho informa
+só "Internal Error", então o apagamento se lê como defeito, não como decisão.</p>
+<p>Crédito onde é devido: o apagamento em si é real, instantâneo e não dá para
+interromper. Não existe corrida a vencer.</p>
+<p>Agora leia o aviso seguinte na mesma página. Depois disso "there is no way to
+regain access to your funds except by restoring using your recovery phrase",
+então o titular deve "make sure you have a backup before proceeding".</p>
+<p>A função pressupõe um backup. Quem segue a documentação tem um; quem não segue
+destruiu as próprias economias sob pressão. Ou seja, o que o apagamento remove
+não é o segredo. Ele remove o caminho <em>do aparelho</em> até o segredo, e deixa de pé
+o caminho que passa pela memória da pessoa sobre onde está o backup.</p>
+<p>O apagamento apaga a rota que não exigia machucar ninguém, e mantém a que exige.</p>
+<h3>A Coldcard documenta a regressão</h3>
+<p>Você não precisa deduzir o passo seguinte. Um fabricante publicou.</p>
+<p>A Coldcard tem PINs de truque, entre eles uma carteira de coação descrita como "a
+personal safety feature… If you must reveal a PIN under duress, give the duress
+PIN instead of your Main PIN". Lógica de isca comum. A documentação do firmware
+então considera o que acontece quando a isca não é acreditada, e o conselho é
+escalar: "you may be asked what the actual duress PIN is, while under duress. We
+suggest providing the 'brickme' PIN in that case."</p>
+<p>Isso é um fabricante contemplando um atacante que sabe que iscas existem, e
+recomendando um apagamento irreversível feito com a vítima ainda na sala, ainda
+respirando, ainda disponível para ser perguntada onde está o backup.</p>
+<p>Mais duas admissões na mesma página merecem citação porque fabricante raramente
+faz. A primeira concede que a isca é distinguível: "if you are somehow facing an
+attacker who is willing to verify he has the real main PIN, it's possible that
+careful analysis of system responses will imply he's working with the duress
+PIN." O remédio oferecido não é um conserto. É um pedido: "if you discover any
+sequences that reveal this easily, please tell us and we'll see if we can cover
+them up better."</p>
+<p>Segurança por obscuridade declarada como programa de manutenção. O que está sendo defendido não
+é que a isca seja indistinguível, e sim que ninguém publicou ainda como
+distingui-la. Um esquema cuja segurança é o estado atual da fila de divulgação é
+um esquema que você não pode invocar na sala, porque não faz ideia do que o homem
+na sua frente leu.</p>
+<p>A segunda admissão é a negativa em si, oferecida para quando brickar é
+indigesto: "alternatively, you can say you set the duress PIN once, but have
+since forgotten it."</p>
+<p>Você não consegue provar que esqueceu. É o paper companheiro inteiro em cinco
+palavras, e aqui está ele como orientação publicada. O fabricante enumerou os
+ramos e achou um blefe em cada um.</p>
+<h3>O que cada fabricante realmente afirma</h3>
+<p>Isso importa, e é onde a maior parte das críticas desse tipo erra. As três
+empresas não fazem as mesmas afirmações, e um fabricante que entrega um mecanismo
+sem afirmar que ele derrota coação não cometeu o erro de que este texto trata.</p>
+<p>A Blockstream vende o apagamento para ameaça física, e não afirma nada parecido
+para as carteiras com passphrase. O enquadramento de coação das iscas por
+passphrase é invenção da comunidade, não do fabricante. A Coldcard vende as duas
+metades. A Trezor é a imagem espelhada da Blockstream: as carteiras com
+passphrase dela são vendidas como negabilidade, enquanto o wipe code, que a
+própria fabricante chama de PIN de "self-destruct" e que apaga a semente de
+recuperação, está documentado sem nenhuma menção a coação, coerção ou ameaça
+física.</p>
+<p>A Trezor também é a que foi procurada, em janeiro de 2022, para tornar o wipe
+<em>disfarçável</em>: uma mensagem definida pelo usuário na entrada, para que o
+apagamento passasse por falha de hardware. O pedido foi fechado como <strong>not
+planned</strong>. O aparelho continua anunciando o wipe abertamente.</p>
+<p>Essa recusa é o documento mais interessante de toda a classe. Ela mostra que o
+disfarce de "Internal Error" não é intrínseco ao apagamento. É uma escolha de
+apresentação: um fabricante construiu, outro foi procurado diretamente e
+declinou.</p>
+<h3>Uma ignorância, ou duas</h3>
+<p>Existe um jeito limpo de ordenar isso, e não é por quão provável é que o atacante
+seja ignorante. É por quantas coisas separadas ele precisa ignorar.</p>
+<p>Uma isca precisa de uma. Ele não pode saber que iscas existem. Conceda isso e a
+isca funciona de verdade: ele vai embora com um saldo plausível e uma história
+que fecha.</p>
+<p>Um autodestruidor precisa de duas, e elas são independentes. Ele não pode saber
+que a função existe, para que a falha se leia como defeito. E ele não pode
+raciocinar até o backup, que o manual mandou o titular guardar. A segunda não
+decorre da primeira. "Este aparelho está quebrado" nunca implicou "esta pessoa
+não tem bitcoin". Implica que o instrumento quebrou, e a pergunta natural
+seguinte é onde você guarda o backup, feita a alguém que continua ali de pé.</p>
+<p>Então contra um atacante informado o autodestruidor falha pela razão
+Kerckhoffsiana comum, e contra um ignorante ele falha do mesmo jeito, porque a
+crença que ele fabrica não encerra o encontro. É o único esquema obscuro que não
+tem ramo em que vença.</p>
+<p align="center"><img src="assets/m1-one-ignorance-or-two.png" alt="Uma isca precisa que o atacante ignore uma coisa. Um autodestruidor precisa que ele ignore duas, de forma independente, e não tem ramo em que vença." width="680"></p>
+
+<p>Existe uma versão mais silenciosa da mesma falha. O FAQ do Sparrow documenta uma
+opção para guardar os dados da carteira em mídia removível, observando que ela
+"allows you to store all Sparrow data on removable media making for more
+plausible deniability". A própria página de boas práticas do Sparrow mantém as
+palavras da semente guardadas em separado, "ideally in a different location".
+Então o atacante coage o backup da semente, carrega num carteira dele, e nunca
+encosta na mídia escondida. Uma isca pelo menos fica entre ele e as moedas. Essa
+aqui não fica nem perto delas, e o que ela acrescenta é a confiança de fazer uma
+negativa.</p>
+<h2>Oitenta e oito pessoas, doze casos</h2>
+<p>A classe supõe um adversário que os autos dizem não existir.</p>
+<p>A promotoria francesa denunciou 88 pessoas em cerca de uma dúzia de casos de
+sequestro e extorsão ligados a cripto, o que é uma contagem num instante de uma
+série de processos em curso, e não um total fechado. A contagem da CertiK para o
+primeiro semestre de 2026 tem invasões domiciliares indo de 1 para 20 em 52
+incidentes na comparação anual, o que é a amostra semestral de uma empresa e não
+o registro público, então leia a direção e não a casa decimal.</p>
+<p>Onde quer que os números exatos parem, eles descrevem quadrilhas organizadas com
+reconhecimento e seleção de vítimas rodando em cima de bancos de dados vazados.
+Não oportunistas incapazes de ler uma página de suporte na língua em que ela foi
+escrita.</p>
+<h2>O tiro pela culatra</h2>
+<p>Segurança por obscuridade não é só ineficaz. Vendida em escala, ela se autodestrói, e quem mais
+se machuca nunca comprou nada.</p>
+<p>A isca não é só uma prática tolerada. É produto e é currículo. Uma consultoria de
+autocustódia em espanhol lista entre os planos pagos "<em>Passphrase (tu bóveda
+señuelo)</em> — Billetera señuelo + billetera real. Protección ante
+coacción/coerción": uma carteira isca vendida, com todas as letras, como proteção
+contra coação. Guias publicados treinam a encenação. Um deles manda o titular
+manter um saldo pequeno na semente nua como o que você entregaria sob coação
+física, acrescentando que "para isso funcionar, o saldo isca precisa ser <em>crível</em>
+— o bastante para parecer uma carteira de verdade, não o bastante para te arrasar
+se for perdido".</p>
+<p>Leia isso como objetivo de treinamento e o problema aparece. Uma isca só precisa
+ser crível para um atacante que possa não acreditar nela, e o conselho fica quieto
+sobre o que acontece quando ele não acredita, que é a pergunta inteira. Segurança
+por obscuridade está sendo vendida aqui como se fosse um controle, precificada e
+ensinada.</p>
+<h3>A negativa é um bem comum, e está sendo drenada</h3>
+<p>Treinamento divulgado aumenta a probabilidade a priori de que uma negativa
+fluente tenha sido ensaiada. Quando o atacante sabe que credibilidade é ensinada
+e vendida, fluência deixa de ser evidência de verdade e passa a ser evidência de
+treino. O remédio degrada aquilo que ele vende.</p>
+<p>E degrada para todo mundo. Quem nunca treinou, quem está falando a verdade nua,
+agora nega para um atacante que desconta negativas fluentes em geral. Quem não
+tem bitcoin nenhum também. O desenvolvimento completo disso está em <em>The Denial
+Spiral</em>, e é a razão de esta série tratar obscuridade como problema de saúde
+pública, e não como problema pessoal.</p>
+<p>Esconder precisa de algum lugar onde se esconder. O que um titular discreto tem
+para sumir dentro é a multidão enorme de pessoas que visivelmente não têm
+bitcoin, e isso só funciona enquanto a multidão for majoritariamente genuína.
+Treine gente suficiente para se apresentar como comum e comum deixa de carregar
+informação, porque o atacante não está mais separando quem tem de quem não tem.
+Se todo mundo é agulha, não existe palheiro.</p>
+<p align="center"><img src="assets/m2-no-hay.webp" alt="Um monte de agulhas de costura sobre fundo branco, e nada além de agulhas na pilha." width="612"></p>
+
+<p align="center"><em>Estrutural, não medido. Ninguém contou quantos titulares
+praticam discrição, e pelo mecanismo 1 ninguém pode: obscuridade não se anuncia.
+A afirmação é sobre o que acontece com a multidão conforme o treinamento se
+espalha, não sobre onde a multidão está hoje.</em></p>
+
+<h2>Um projeto público torna uma negativa comum mais crível</h2>
+<p>Uma última inversão, e é a parte que eu acho genuinamente surpreendente.</p>
+<p>Uma defesa obscura pede ao atacante que acredite numa afirmação, contra o
+incentivo dele de não acreditar e sem jeito nenhum de nenhum dos dois resolver a
+questão. Um projeto publicamente especificado muda quanto custa fazer essa
+afirmação. Um atacante que dá crédito à existência de mecanismos eficazes em
+circulação está dando crédito a que mentir não é a única ferramenta disponível
+para a vítima, e um titular com alternativas reais tem menos motivo para recorrer
+à mentira.</p>
+<p>Então um projeto limpo do ponto de vista de Kerckhoffs melhora a posição
+exatamente daquelas negativas obscuras que ele foi construído para tornar
+desnecessárias. Segurança por obscuridade continua insustentável como defesa
+primária. Ela não é indiferente a qual projeto acompanha.</p>
+<hr />
+<p><em>A classificação, a documentação dos fabricantes e o argumento do bem comum estão
+desenvolvidos em</em> <a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><strong><em>The Denial Spiral</em></strong></a><em>,
+acesso aberto, sem cadastro. O companheiro dele,</em>
+<a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><strong><em>The Deadly Race</em></strong></a><em>, trata do que
+acontece depois que o atacante já está na sala: uma apreensão que deixa um caminho
+viável porém não concluído transforma um roubo numa corrida, e precifica a sua
+eliminação.</em></p>
+<p><em>Toda citação de fabricante acima vem de documentação pública, linkada no paper.
+Se eu li errado alguma função, ou se uma página mudou, me avise que eu corrijo em
+público.</em></p>
+<hr />
+<p><strong>Se isso valeu seu tempo.</strong> Mande para alguém que entrega um PIN de coação. Uma ⭐
+no <a href="https://github.com/Yuri-SVB/Great-Wallet">Great Wall</a>, na
+<a href="https://github.com/Yuri-SVB/great-wall-docs">pesquisa</a> ou
+<a href="https://github.com/Yuri-SVB/great-wall-posts">nestes textos</a> não custa nada e faz
+o trabalho ser encontrado. E se você quiser financiá-lo, o
+<a href="https://github.com/Yuri-SVB/support">apoio</a> aceita ⚡ Lightning e on-chain, sem
+cadastro, sem níveis e sem contrapartida nenhuma.</p>
+</article>
+
+<footer>
+  <p>Free to read, translate and republish. Every figure comes from a
+  press-sourced registry with survivorship bias, coded by headline rather than
+  measured; shares overlap and the fatality share is a floor. A number without
+  its caveat is a bug.</p>
+  <p>The arguments are developed in
+  <a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><em>The Deadly Race</em></a> and
+  <a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><em>The Denial Spiral</em></a>,
+  both open access. Source for this post:
+  <a href="https://github.com/Yuri-SVB/great-wall-posts/tree/main/posts/002-obscurity-the-clearest-problem">great-wall-posts</a>.</p>
+  <p><a href="../../audit/">Self-custody audit</a> ·
+     <a href="../../course/">The course</a> ·
+     <a href="../../">Home</a></p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<text x="120" y="110" font-family="Georgia,'Times New Roman',serif" font-size="52" fill="#0b0b0b">The two curves of staying quiet</text>
+<text x="122" y="152" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" fill="#52514e">Both of them run against the holder.</text>
+<line x1="260" y1="760" x2="1360" y2="760" stroke="#8a8781" stroke-width="2"/>
+<line x1="260" y1="200" x2="260" y2="760" stroke="#8a8781" stroke-width="2"/>
+<text x="260" y="800" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" fill="#8a8781">the day you bought</text>
+<text x="1360" y="800" text-anchor="end" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" fill="#8a8781">every year after</text>
+<path d="M 260,690 L 500,650 L 760,560 L 1020,420 L 1280,230" fill="none" stroke="#eb6834" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 260,270 L 500,330 L 760,450 L 1020,590 L 1280,700" fill="none" stroke="#2a78d6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1280" cy="230" r="9" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1280" cy="700" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="1310" y="222" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="600" fill="#0b0b0b">what it costs</text>
+<text x="1310" y="252" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" fill="#52514e">you, to stay private</text>
+<text x="1310" y="692" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="600" fill="#0b0b0b">what it buys</text>
+<text x="1310" y="722" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" fill="#52514e">you, once lists leak</text>
+<text x="120" y="860" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" fill="#8a8781">Schematic. Neither curve is quantified, and neither could be — the shape is the claim, not the values.</text>
+</svg>

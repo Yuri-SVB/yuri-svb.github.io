@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cacher vos bitcoins vous protège-t-il encore ?</title>
+<meta name="description" content="Le conseil standard, pour qui redoute d&#x27;être enlevé à cause de ses bitcoins, tient en trois parties : n&#x27;en parlez à personne, niez si on vous pose la question, et gardez un decoy à céder.">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <img class="mark" src="../../assets/mark.png" alt="">
+  <h1>Cacher vos bitcoins vous protège-t-il encore ?</h1>
+  <p class="role"><time datetime="2026-09-22">2026-09-22</time></p>
+  <nav class="lang"><a href="../">All posts</a> · <a href="index.html">English</a> · <a href="pt-BR.html">Português</a> · <a href="es.html">Español</a> · Français · <a href="it.html">Italiano</a></nav>
+</header>
+
+<hr>
+
+<article>
+<p align="center"><img src="assets/capa-1200x675.webp" alt="Un homme lève un tamis pour cacher le soleil, et la lumière traverse la toile. C'est l'expression brésilienne pour vouloir cacher ce que tout le monde voit déjà." width="680"></p>
+
+<p><strong>Le conseil standard, pour qui redoute d'être enlevé à cause de ses bitcoins,
+tient en trois parties : n'en parlez à personne, niez si on vous pose la
+question, et gardez un <em>decoy</em> à céder.</strong></p>
+<p><strong>Les trois sont des paris sur ce que le criminel va <em>croire</em>. Et aucune n'a
+jamais été évaluée pour ce qu'elle est : un mécanisme de sécurité dont toute la
+force repose sur l'ignorance de l'adversaire.</strong></p>
+<p>Ce texte soutient que cacher ses bitcoins n'est pas seulement inefficace. C'est
+<strong>autodestructeur à l'échelle</strong>, et la facture retombe sur des gens qui n'ont
+jamais suivi le conseil.</p>
+<hr />
+<h2>Cacher ses bitcoins a un nom, un numéro et un casier</h2>
+<p>D'abord le vocabulaire.</p>
+<p>Un <em>decoy</em>, ou portefeuille-leurre. Au Brésil on appelle ça « l'argent du
+voleur », et on connaît bien : une somme plus petite, mise de côté exprès pour
+être cédée lors d'un braquage.</p>
+<p>En ingénierie de la sécurité, toute cette famille de tactiques est cataloguée.
+Ça s'appelle <em>Reliance on Security Through Obscurity</em>, enregistré sous
+<a href="https://cwe.mitre.org/data/definitions/656.html">CWE-656</a>. Dans n'importe quel
+autre domaine, c'est un défaut de conception. Dans la garde de bitcoins, c'est le
+consensus.</p>
+<h3>Le paradigme est condescendant</h3>
+<p>Ce paradigme, qu'on appelle <strong>obscurité</strong> en conception de protocoles, est
+intrinsèquement condescendant. Il suppose que le voleur n'est pas mentalement
+capable de lire les mêmes manuels, de regarder les mêmes tutoriels et de suivre
+les mêmes formations que ses victimes.</p>
+<p>Si vous pouvez apprendre une procédure sur internet, un voleur aussi. Et il
+saura certainement que la procédure existe.</p>
+<hr />
+<h2>Le Brésil occupe le pire quadrant du registre</h2>
+<p>Jameson Lopp tient depuis des années un <a href="https://github.com/jlopp/physical-bitcoin-attacks">registre public des attaques physiques
+contre les détenteurs de bitcoins</a>,
+les « attaques à la clé à molette ». J'ai codé les 351 incidents du
+registre par modalité. La répartition par pays n'a rien d'uniforme : elle varie
+d'un ordre de grandeur.</p>
+<table>
+<thead>
+<tr>
+<th>Juridiction</th>
+<th style="text-align: right;">Incidents</th>
+<th style="text-align: right;">Enlèvement</th>
+<th style="text-align: right;">Vol à main armée</th>
+<th style="text-align: right;">Rapport E:V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Brésil</strong> <em>(petit n)</em></td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">75,0 %</td>
+<td style="text-align: right;">8,3 %</td>
+<td style="text-align: right;"><strong>9,0</strong></td>
+</tr>
+<tr>
+<td>France</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">57,4 %</td>
+<td style="text-align: right;">8,2 %</td>
+<td style="text-align: right;">7,0</td>
+</tr>
+<tr>
+<td><em>Tous les incidents</em></td>
+<td style="text-align: right;">351</td>
+<td style="text-align: right;">35,0 %</td>
+<td style="text-align: right;">22,8 %</td>
+<td style="text-align: right;">1,5</td>
+</tr>
+<tr>
+<td>États-Unis</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">20,3 %</td>
+<td style="text-align: right;">33,9 %</td>
+<td style="text-align: right;">0,6</td>
+</tr>
+<tr>
+<td>Russie <em>(petit n)</em></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">30,0 %</td>
+<td style="text-align: right;">50,0 %</td>
+<td style="text-align: right;">0,6</td>
+</tr>
+</tbody>
+</table>
+<h3>Neuf enlèvements pour un braquage</h3>
+<p>Lisez la colonne de droite. Aux États-Unis, l'attaque typique est un braquage :
+arme sortie, virement immédiat, quelques minutes sur place.</p>
+<p>Au Brésil, la proportion s'inverse. <strong>Pour chaque vol à main armée enregistré,
+neuf enlèvements.</strong> L'attaque brésilienne n'est pas un événement de quelques
+minutes. C'est un événement de plusieurs heures ou de plusieurs jours, la victime
+restant sous le contrôle du criminel tout du long.</p>
+<h3>La réserve vient avec, et elle est sérieuse</h3>
+<p>Le registre est un échantillon de presse, le <code>n=12</code> du Brésil ne soutient rien
+tout seul, et le codage se fait par mot-clé de titre, pas par durée mesurée.
+Traitez la ligne Brésil comme indicative.</p>
+<p>La comparaison qui porte vraiment, c'est la France contre les États-Unis : deux
+sous-ensembles de même taille (61 et 59) aux compositions inversées. La
+composition varie bien avec les conditions locales, et les conditions locales
+brésiliennes sont connues de quiconque vit ici.</p>
+<p>Tout cela compte parce que <strong>toute la promesse de cacher ses bitcoins dépend de la brièveté
+de l'attaque</strong>. Un decoy fonctionne si le criminel prend les 8 000 reais et s'en
+va. Il n'a aucune réponse à la question suivante, posée le troisième jour, en
+captivité.</p>
+<hr />
+<h2>Ce qui arrive quand tout le monde est formé à nier</h2>
+<p>Voici le mécanisme, et il est économique avant d'être cryptographique.</p>
+<h3>La crédibilité d'une dénégation est une ressource commune</h3>
+<p>Elle est produite par l'ensemble des détenteurs et consommée par chacun de ceux
+qui nient. Tant que nier reste rare, nier porte de l'information : le criminel
+met à jour sa croyance et vos chances d'être relâché montent.</p>
+<p>Dès que nier devient le script attendu, dès que chaque chaîne, chaque formation,
+chaque groupe Telegram enseigne la même phrase, <strong>une dénégation cesse de porter
+de l'information</strong>.</p>
+<p>Un interrogatoire qui s'ouvre sur « je n'ai rien » ne donne au criminel aucune
+mise à jour en votre faveur. Et sa suite rationnelle, à ce moment-là, n'est pas
+de vous relâcher. C'est d'insister.</p>
+<p>La réponse individuellement rationnelle à cet environnement, c'est de mieux se
+cacher et de répéter davantage. Ce qui <strong>épuise la ressource encore plus, pour
+tout le monde</strong>.</p>
+<p>J'ai appelé ça la <strong>Spirale du Déni</strong>, et son coût est une externalité
+classique : il retombe sur qui a besoin d'être cru. Y compris sur qui utilise un
+dispositif qui ne dépend pas du mensonge. Y compris sur qui, honnêtement, <strong>ne
+détient aucun bitcoin</strong>, et le registre contient de tels cas.</p>
+<h3>Le marché vend l'épuisement comme un produit</h3>
+<p>Diverses sociétés de conseil, formations et tutoriels d'autoconservation
+proposent, parmi leurs services payants, le montage de decoys avec entraînement
+à la crédibilité.</p>
+<p>Donc : on paie pour devenir fluide dans une dénégation que le criminel escompte
+déjà, précisément parce qu'elle est enseignée et vendue. Le remède dégrade ce
+qu'il vend, et pas seulement pour le client.</p>
+<hr />
+<h2>Le problème plus grave : vous ne pouvez pas prouver que vous avez oublié</h2>
+<p>Il y a une seconde faille, et elle est pire, parce qu'elle porte sur l'issue
+plutôt que sur la durée.</p>
+<p>Partez d'un fait simple et incontournable : <strong>personne ne peut prouver qu'il ne
+sait pas quelque chose.</strong> Savoir est démontrable ; ne <em>pas</em> savoir, non. Vous
+n'avez aucun moyen de prouver que vous avez oublié la passphrase, ni qu'aucune
+sauvegarde n'existe nulle part.</p>
+<h3>La Course Mortelle</h3>
+<p>Considérez maintenant n'importe quel dispositif qui, une fois votre appareil
+saisi, laisse au criminel un chemin <strong>viable mais inachevé</strong> jusqu'à l'argent :
+un verrou temporel, une récupération détenue par un tiers, un coffre à délai,
+une clé qu'il reste à casser.</p>
+<p>On vous relâche. Et vous ne pouvez pas prouver que vous n'avez gardé aucune copie
+utilisable.</p>
+<p>Ce qui existe à partir de là, c'est une <strong>course</strong> entre vous et lui pour le même
+solde. Et une course contre un concurrent à portée de main crée quelque chose
+qu'aucun livre blanc de portefeuille ne mentionne : <strong>une incitation matérielle à
+vous éliminer.</strong> Pas par cruauté. Par arithmétique. Sortir l'autre coureur de la
+piste est le coup le moins cher disponible.</p>
+<p>J'ai appelé ça la <strong>Course Mortelle</strong>. Dans le registre, au moins 4,6 % des
+incidents (16 sur 351) font état d'une victime tuée, et ce chiffre est un
+<strong>plancher</strong>, pas une estimation : un homicide est rapporté comme un homicide,
+pas comme « attaque contre un détenteur de bitcoins ». L'issue que l'argument
+prédit est documentée dans les faits.</p>
+<h3>Pourquoi le decoy est une machine à zone grise</h3>
+<p>Le critère de conception qui en découle est sec : <strong>un dispositif de garde
+résistant à la coercition ne peut admettre que deux issues. L'attaque réussit
+clairement, ou l'attaque échoue clairement. Jamais une course.</strong></p>
+<p>La zone grise est exactement là où vit l'incitation au meurtre. J'ai appelé ça le
+<strong>Principe d'Absence de Zone Grise</strong>.</p>
+<p>Voyez ce que ça fait au decoy. Il est, par construction, une machine à zone
+grise : le criminel repart en soupçonnant qu'il y a davantage, sans aucun moyen
+de régler ce soupçon. C'est le pire endroit possible où se trouver.</p>
+<hr />
+<h2>Un cas brésilien qui referme l'argument</h2>
+<p>Porto Velho, octobre 2019. Un gang enlève
+<a href="https://archive.is/jyzcJ">Arcilio Nogueira de Souza</a>, attache la victime à un
+arbre et la frappe pendant des heures. Les criminels <strong>n'ont rien emporté</strong> : le
+téléphone ne donnait pas accès aux fonds.</p>
+<p>Ce cas, c'est l'argument entier en un paragraphe. L'inaccessibilité des fonds
+<em>n'a pas mis fin à l'attaque</em>. Elle l'a <strong>prolongée</strong>.</p>
+<p>Le dispositif a « fonctionné » au sens où l'industrie le mesure, l'argent n'est
+pas parti, et la personne a passé des heures attachée à un arbre à se faire
+battre, parce qu'en dehors de sa tête il n'y avait rien qui puisse régler le
+doute du criminel.</p>
+<p>C'est pour ça que je sépare les deux mécanismes. La Course Mortelle tarifie
+l'<strong>issue</strong>. La Spirale du Déni tarifie la <strong>durée</strong>. Un dispositif peut être
+innocent de l'un et coupable de l'autre, et l'essentiel de ce qui se vend
+aujourd'hui est coupable des deux.</p>
+<hr />
+<h2>Ce qui reste, si cacher ses bitcoins n'est pas une défense</h2>
+<p>Il reste trois routes honnêtes, et il vaut mieux savoir sur laquelle on est.</p>
+<h3>1. Physique</h3>
+<p>Dispersion géographique, coffres, multisig avec garde lointaine. Ça marche, et ça
+réduit la sécurité du bitcoin à « le coffre est-il bon ». Le bitcoin devient de
+l'<strong>or avec des étapes en plus</strong>, à un coût qui croît avec la défense. Pour
+l'immense majorité, c'est hors de portée.</p>
+<h3>2. Déléguée</h3>
+<p>Quelqu'un hors d'atteinte du criminel détient la pièce manquante : une
+plateforme d'échange, une cogarde, une récupération par un tiers. Ça satisfait le
+critère, mais ça change la prémisse : la garde cesse d'être individuelle. <em>Not
+your keys.</em> Et la route se <strong>ferme</strong> si le délégataire habite près de chez vous.</p>
+<h3>3. Tacite</h3>
+<p>Le secret n'a jamais été sur l'appareil, et ne peut pas être dicté même sous la
+torture, parce que c'est une reconnaissance perceptuelle et non une phrase.
+Saisir le matériel ne donne rien de viable. <strong>Échec clair</strong>, aucun coureur en
+trop, garde toujours individuelle.</p>
+<p>La troisième route est celle sur laquelle je travaille, et le projet s'appelle
+<strong>Great Wall</strong>. Voici l'avertissement que tout texte honnête à ce sujet doit
+porter : <strong>l'implémentation est un prototype. N'y mettez pas encore vos
+économies.</strong></p>
+<p>Quand ça changera, ce sera écrit, avec une date, dans
+<a href="https://github.com/Yuri-SVB/support/blob/main/DELIVERED.md"><code>DELIVERED.md</code></a>, un
+fichier tenu dans git précisément pour que « le travail avance » soit une
+affirmation auditable et non une promesse.</p>
+<h3>L'effet secondaire contre-intuitif</h3>
+<p>Cette route a un bel effet secondaire : <strong>un projet public et non obscur améliore
+la position de ceux qui nient.</strong></p>
+<p>Un criminel qui croit qu'un mécanisme efficace circule est en train de croire que
+mentir n'est pas le seul outil dont dispose la victime. Et une victime qui a une
+vraie alternative a moins de raisons de mentir.</p>
+<p>Cacher ses bitcoins reste mauvais comme défense principale. Mais le dispositif que cette
+pratique accompagne n'est pas indifférent.</p>
+<hr />
+<h2>Ce que je vends, et ce que je ne vends pas</h2>
+<p><strong>Je ne vends pas de logiciel.</strong> Great Wall, BTC-D20, BIP-450 et les articles
+sont sous MIT ou Apache-2.0, et ça ne change pas : pas de version « pro », pas de
+fonctionnalité débloquée par paiement, pas de file prioritaire pour les
+donateurs.</p>
+<p>C'est écrit dans le <a href="https://github.com/Yuri-SVB/support">dépôt de soutien</a>, et
+c'est écrit là parce qu'une promesse dans un article ne vaut rien et qu'une
+promesse dans git a une date.</p>
+<h3>En revanche je vends du conseil en autoconservation</h3>
+<p>C'est un service, et le voici : je regarde le dispositif que vous avez déjà,
+portefeuille matériel, passphrase, multisig, decoy, plan de succession, ce qu'il
+y a, et je réponds à quatre questions dans un rapport fermé :</p>
+<ol>
+<li>Votre sécurité repose-t-elle sur un <strong>tour de passe-passe</strong> ? Dépend-elle de
+   ce que l'attaquant ignore ce que vous faites, et comment vous le faites ?</li>
+<li>Une fois vos appareils et vos secrets saisis, l'attaquant pourrait-il dépenser
+   <strong>tout de suite</strong>, ou seulement <strong>au bout d'un certain temps</strong> ? « Au bout
+   d'un certain temps » veut dire que vous êtes encore un coureur.</li>
+<li>Votre garde est-elle <strong>strictement individuelle</strong> ? Quelqu'un d'autre peut-il
+   faire quelque chose qui vous empêche d'atteindre vos propres pièces ?</li>
+<li>Dépend-elle d'<strong>objets précis dans des lieux précis</strong> ? Et ces lieux sont-ils
+   à vous ?</li>
+</ol>
+<p>Ce n'est pas de la vente de produit : dans la plupart des audits, la
+recommandation est de retoucher ce qui existe déjà, et dans certains le verdict
+est que c'est raisonnable. Ce que je ne ferai pas, c'est monter un decoy avec
+entraînement à la dénégation, pour tout l'argument ci-dessus.</p>
+<p>Contact : <strong>yuri@t3infosecurity.com</strong>.</p>
+<h3>Et si vous ne voulez rien acheter</h3>
+<p>Les articles sont gratuits et derrière aucune inscription :
+<a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><em>The Deadly Race</em></a> (la course et le
+critère) et <a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><em>The Denial Spiral</em></a> (la
+spirale, la classification des produits obscurs sur le marché, et la méthode de
+codage du registre).</p>
+<p>Les données d'incidents nouvelles vont au <a href="https://github.com/jlopp/physical-bitcoin-attacks">registre de
+Lopp</a> plutôt que dans une base
+à moi, parce que cette information est un bien public et appartient à tout le
+monde, y compris à la prochaine cible.</p>
+<p>Si ceci vous a été utile, <a href="https://github.com/Yuri-SVB/support">le soutien se trouve
+ici</a>. Lightning et on-chain, sans
+contrepartie et sans inscription.</p>
+<hr />
+<p><em>Yuri da Silva Villas Boas est cryptographe appliqué, auteur de la BIP-450
+(Formosa) et du protocole Great Wall. Les deux affirmations centrales de cet
+article sont développées formellement dans les articles cités, actuellement en
+évaluation académique.</em></p>
+</article>
+
+<footer>
+  <p>Free to read, translate and republish. Every figure comes from a
+  press-sourced registry with survivorship bias, coded by headline rather than
+  measured; shares overlap and the fatality share is a floor. A number without
+  its caveat is a bug.</p>
+  <p>The arguments are developed in
+  <a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><em>The Deadly Race</em></a> and
+  <a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><em>The Denial Spiral</em></a>,
+  both open access. Source for this post:
+  <a href="https://github.com/Yuri-SVB/great-wall-posts/tree/main/posts/009-esconder-bitcoin-ainda-protege">great-wall-posts</a>.</p>
+  <p><a href="../../audit/">Self-custody audit</a> ·
+     <a href="../../course/">The course</a> ·
+     <a href="../../">Home</a></p>
+</footer>
+
+</div>
+</body>
+</html>

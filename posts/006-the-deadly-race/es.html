@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La carrera mortal</title>
+<meta name="description" content="Todo plan de autocustodia tiene un punto donde deja de tratarse de software. Hay alguien dentro de tu casa. Tienen tu hardware wallet, tienen tu teléfono y te tienen a ti, y lo que pase después no lo va a resolver tu fuente de entropía. Lo que quieres de tu arreglo en ese momento es resistencia a la">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <img class="mark" src="../../assets/mark.png" alt="">
+  <h1>La carrera mortal</h1>
+  <p class="role"><time datetime="2026-10-04">2026-10-04</time></p>
+  <nav class="lang"><a href="../">All posts</a> · <a href="index.html">English</a> · <a href="pt-BR.html">Português</a> · Español · <a href="fr.html">Français</a> · <a href="it.html">Italiano</a></nav>
+</header>
+
+<hr>
+
+<article>
+<p align="center"><img src="assets/cover-1200x675.webp" alt="Una balanza de platillos con poca luz. Un cráneo humano en un platillo y un reloj de arena en el otro, pesados el uno contra el otro." width="680"></p>
+
+<p>Todo plan de autocustodia tiene un punto donde deja de tratarse de software. Hay
+alguien dentro de tu casa. Tienen tu hardware wallet, tienen tu teléfono y te
+tienen a ti, y lo que pase después no lo va a resolver tu fuente de entropía. Lo
+que quieres de tu arreglo en ese momento es resistencia a la coacción, y casi
+nadie de los que la venden ha revisado qué haría falta para tenerla.</p>
+<p>Casi todos los diseños tienen una respuesta para ese momento, y suele ser alguna
+versión de <em>no se lo llevan todo</em>. Una passphrase que no tienen. Una llave en
+otra ciudad. Un rescate con timelock. Una semilla partida en tres. La parte
+tranquilizadora es la misma en todas: terminado el encuentro, al atacante
+todavía le falta para el dinero.</p>
+<p>Justo esa tranquilidad es el problema, y vale la pena desmenuzar por qué, porque
+el argumento tiene cuatro pasos y cada uno por separado es aburrido.</p>
+<h2>Lo que no puedes hacer</h2>
+<p>Empieza por algo que suena a tecnicismo.</p>
+<p>Puedes probar que sabes un secreto. Firmas un mensaje, entregas una preimagen,
+gastas desde la dirección. Probar que <em>no</em> lo sabes, o que no existe ninguna
+copia en ningún lugar a tu alcance, no es una versión más difícil de la misma
+tarea. No hay protocolo para eso, porque no hay nada que exhibir. <strong>No puedes
+probar que olvidaste.</strong></p>
+<p>Fíjate en lo poquísimo que bastaría esconder para que esto se sostenga. Una
+tarjeta SD. Una contraseña que te aprendiste de una cuenta de correo donde hay
+un archivo cifrado. Cuatro palabras escritas en el margen de un libro en el
+librero. Nada de eso es exótico, y nada de eso lo puede descartar alguien
+parado en tu sala.</p>
+<p>Así que el atacante que ya terminó contigo se queda con una pregunta que no
+puede cerrar: ¿hay otra copia? Y tiene que contestarla del único modo racional,
+que es suponer que sí.</p>
+<h2>En qué convierte eso un asalto</h2>
+<p>Junta las dos mitades, y acuérdate de qué tipo de activo es este. Bitcoin es al
+portador y es rival: el primer gasto válido se lo lleva todo, y no hay
+apelación, no hay contracargo, no hay aseguradora a la cual llamarle.</p>
+<p>Si se va con un camino a tus monedas que todavía no termina, y te suelta, los
+dos quedan apuntando al mismo dinero con el mismo reloj corriendo. Él va
+avanzando sobre lo que decomisó. Tú vas, hasta donde él sabe, caminando hacia un
+segundo respaldo que nunca encontró. Solo uno de los dos llega primero.</p>
+<p>En ese punto no eres una víctima en ningún sentido que a él le importe. Eres el
+otro corredor.</p>
+<h3>Mientras más amable el fallback, peor se pone</h3>
+<p>Un diseño que falla en seco le entrega al atacante todo o nada. Un diseño que se
+degrada <em>con elegancia</em> está hecho para darle un camino lento, parcial y
+eventual, que es otra forma de decir que mantiene sus probabilidades bien por
+debajo de la certeza mientras deja el saldo entero sobre la mesa. Esa
+combinación es justo la que maximiza lo que gana quitando a la competencia.</p>
+<p>La degradación elegante es una virtud en casi cualquier otro sistema que vayas a
+construir. En este es el modo de falla, y los productos que más calurosamente la
+anuncian están sentados en la peor parte del rango.</p>
+<h2>La aritmética, que por desgracia es simple</h2>
+<p>Contigo vivo y libre, lo que él espera sacar son sus probabilidades de ganar la
+carrera por el valor del monto. Te mata y sus probabilidades se van a casi uno.
+La diferencia entre esos dos números es lo que gana. Actúa cuando supera lo que
+un homicidio le cuesta.</p>
+<p>Esa es toda la cuenta. No aparece criptografía por ningún lado, y por eso "el
+cifrado es fuerte" no es una respuesta. El peligro lo fabrica la <em>forma</em> del
+camino de recuperación, no su dureza. La resistencia a la coacción vive en la
+capa de incentivos, y la mayoría de los modelos de amenaza no tiene una columna
+para eso.</p>
+<p>Y esto no es un experimento mental sin datos de resultado. Dieciséis de los 351
+incidentes del registro público de Jameson Lopp anotan una víctima asesinada. Es
+4.6%, y es un piso y no una estimación, porque un homicidio suele reportarse
+como homicidio y no como ataque a un bitcoiner, así que los que nunca se ligan a
+una cartera nunca entran en la cuenta.</p>
+<h2>'Llévame contigo' — el pacto scherezadiano</h2>
+<p>Lo que sigue es una hipótesis sobre lo que la estructura de incentivos puede
+llevar a hacer a los agentes. Hasta hoy no tengo evidencia empírica que
+confirme ninguna instancia particular de esa cadena de hechos, aunque por los
+mismos mecanismos de supresión de información que trata
+<a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><strong>The Denial Spiral</strong></a> y que recorre
+<a href="https://yuri-svb.github.io/posts/007-anosognosia/"><strong>Anosognosia</strong></a>,
+el silencio esté sobredeterminado.</p>
+<p>En cualquier punto de un wrench attack contra un arreglo vulnerable a la
+carrera mortal, el agresor, la víctima o los dos pueden darse cuenta de los
+incentivos para el movimiento terminal. En esa situación la víctima puede de
+hecho <strong>ofrecerse</strong> a quedar bajo la custodia del agresor, en un <strong>pacto
+scherezadiano</strong> torcido. En <em>Las mil y una noches</em>, la protagonista se ofrece a
+lo que termina siendo un cautiverio para frenar la muerte de terceros, y luego
+alarga ese cautiverio noche tras noche, mil y una veces, para aplazar la suya
+propia, ofreciendo desenlaces en suspenso a cambio de su vida.</p>
+<p align="center"><img src="assets/m3-scheherazade.webp" alt="El cuadro de Ferdinand Keller, de 1880. Scherezada está recostada en una sala iluminada por lámparas, con una mano levantada a mitad de una frase, mientras el sultán barbado se inclina desde la sombra para escuchar." width="680"></p>
+
+<p align="center"><em>Ferdinand Keller, “Scheherazade und Sultan Schariar” (1880), dominio
+público. Ella está a mitad del cuento y él está escuchando, y ese es todo el
+mecanismo: lo que compra la mañana siguiente es que el cuento no haya
+terminado. En el libro la perdonan en la mañana mil dos.</em></p>
+
+<p>En una carrera mortal, cambiar el movimiento terminal por un secuestro le baja
+al agresor la responsabilidad penal y le conserva casi la misma ventaja en la
+carrera, y le perdona la vida a la víctima. Víctima y agresor pueden así
+concluir que el pacto es mutuamente conveniente, y cooperar con el secuestro.</p>
+<h2>Éxito claro o fracaso claro — nunca una carrera</h2>
+<p align="center"><img src="assets/m1-the-gray-band.png" alt="Una línea del fracaso claro al éxito claro, con la banda del medio marcada como la carrera. La banda dice: el atacante tiene un camino, tú sigues vivo, y quitarte de en medio es lo que sube sus probabilidades. Decisorio, no criptográfico." width="680"></p>
+
+<p>De ahí sale la prueba, y es lo bastante directa como para aplicarla sin saber
+matemáticas.</p>
+<p>La resistencia a la coacción significa dejar solo dos tipos de final. O el
+ataque fracasa claramente, es decir, lo que se llevó no llega a ningún lado y a
+ti no te queda nada transmisible que entregar. O gana claramente, es decir, se
+queda con las monedas durante el encuentro y después no hay carrera porque no
+quedó nada por lo cual correr.</p>
+<p>Todo lo que está en medio es la banda peligrosa. No "menos seguro".
+Estructuralmente distinto, porque es la única región donde matarte rinde.</p>
+<p>El segundo final te cuesta el dinero, y a la gente no le gusta oír que eso
+cuenta como aprobado. Cuenta, porque la vara aquí es tu supervivencia primero y
+tus monedas después. Un esquema que entrega el saldo limpiamente no mata a
+nadie. Un esquema que lo deja a medio camino es peor que esa pérdida limpia, que
+es una frase para quedarse pensándola, dado que casi todos los fallbacks del
+mercado están hechos para dejarlo a medio camino.</p>
+<h2>Las dos rutas hacia la resistencia a la coacción</h2>
+<p align="center"><img src="assets/m2-two-exits.png" alt="Dos maneras de pasar el criterio: quitar la carrera, de modo que no exista ningún camino viable después del decomiso y la custodia siga siendo individual; o quitar el alcance, de modo que quien gane sea un delegado remoto, lo que vuelve compartida la custodia. Afirmación estructural sobre qué pasa el criterio, no una medición." width="680"></p>
+
+<p>El incentivo solo muerde contra un corredor que él sí puede alcanzar. Así que
+hay dos rutas y no una tercera, y todo producto en el campo toma una de las dos
+o ninguna.</p>
+<p><strong>Quitar la carrera.</strong> Arreglar las cosas de modo que, después del decomiso, no
+exista ningún camino viable. El secreto queda detrás de algo que no se puede
+entregar bajo ninguna presión y no se puede reconstruir con lo que se llevó. La
+custodia sigue siendo solo tuya.</p>
+<p>La otra es quitarle el alcance. Hacer que quien va a ganar la carrera sea
+alguien a quien él no puede llegar: un delegado remoto que guarda la capacidad
+de rescate y no está en el cuarto. La carrera sigue existiendo, pero el corredor
+que tendría que eliminar está a mil kilómetros, y matarte no le rinde nada.</p>
+<h3>La ruta del delegado funciona, y no es autocustodia</h3>
+<p>Esa segunda ruta es real, y hay que decirlo con todas sus letras y sin mala
+gana. Pasa el criterio.</p>
+<p>Lo pasa suponiendo que tu delegado te va a negar. Ese es el mecanismo: la misma
+negativa que derrota una petición tuya bajo coacción, con una pistola en la
+cabeza, también derrota una petición tuya genuina en el peor día de tu vida, y
+no hay versión en la que las distinga, porque distinguirlas es justo lo que no
+se puede hacer. Volviste a meter a la contraparte de confianza que todo el
+ejercicio quería sacar. <em>Not your keys, not your coins</em> aquí no es un eslogan,
+es nada más una descripción correcta de lo que contrataste.</p>
+<p>Conviene saber cuál elegiste. Hay bastante gente en la ruta del delegado creyendo
+que está en la otra.</p>
+<h3>Dónde caen los arreglos geográficos</h3>
+<p>Repartir partes entre ciudades parece la primera ruta y se comporta como la
+segunda, mal. En cuanto para el wrench attack, quien llegue primero a
+suficientes sitios se lleva el dinero, y eso ya es una carrera a pie sobre
+terreno físico. Puede funcionar: si los sitios son bastante difíciles de
+alcanzar, sus probabilidades caen tanto que la carrera no vale la pena.</p>
+<p>Pero mira lo que eso concede. Tu seguridad ya es una pregunta sobre qué tan
+buenas son tus defensas físicas frente a un atacante físico. Eso es oro con
+pasos extra, y si vas a terminar cuidando objetos en bóvedas, los objetos al
+menos pudieron haber sido oro.</p>
+<h2>El residual, dicho con honestidad</h2>
+<p>Sobrevive una ventana, y fingir lo contrario haría de este texto el mismo tipo
+de documento que está criticando.</p>
+<p>En la construcción tácita hay un periodo de más o menos uno a dos minutos al
+final de la derivación en el que el estado está vivo. Un atacante que decomisa
+dentro de esa ventana se lleva una rebanada del último paso, no un arranque
+desde cero. Si ese minuto rebanado vale un homicidio depende de otras
+condiciones que en general no se cumplen, pero es una ventana real y su lugar
+está a la vista.</p>
+<p>Así se ve una afirmación de resistencia a la coacción cuando es honesta: un
+número, una duración y las condiciones bajo las cuales importa. Compárala con
+"ofrece negación plausible", que no acota nada y nadie puede comprobar.</p>
+<h2>Cuatro preguntas, y son tuyas</h2>
+<p>Lo que sirve aquí no es el argumento. Es que la resistencia a la coacción se
+derrumba en una prueba que puedes correr sobre tu propio arreglo esta tarde.</p>
+<ol>
+<li><strong>¿Alguna parte de esto depende de que el atacante no sepa algo?</strong> No de que
+   no tenga una llave. De que no tenga <em>conocimiento</em> de una función, de una
+   costumbre, de un escondite.</li>
+<li><strong>Una vez que tienen tus aparatos y todo lo que dirías bajo presión, ¿queda
+   todavía un camino a las monedas?</strong> Uno lento cuenta. Uno lento es el problema
+   entero.</li>
+<li><strong>¿Tu custodia es individual de verdad?</strong> ¿O hay una persona de cuya negativa
+   depende tu seguridad, y lo decidiste a propósito?</li>
+<li><strong>¿Hay algún estado de tu arreglo en el que el ataque se acabe claramente?</strong>
+   Donde él lo tenga, o donde no quede nada que pueda llevarse, y de cualquiera
+   de las dos formas no haya motivo para volver.</li>
+</ol>
+<p>Esas son las cuatro preguntas por las que cobro. Valen poco como secreto y
+bastante como costumbre, así que aquí están. Si tu arreglo contesta la cuarta con
+"bueno, a fin de cuentas acabaría consiguiéndolo", encontraste la banda.</p>
+<hr />
+<p><em>La cadena de arriba está enunciada como se debe, con el lema, el criterio y la
+construcción que lo pasa, en</em>
+<a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><strong><em>The Deadly Race</em></strong></a><em>, acceso
+abierto, sin registro. Su acompañante,</em>
+<a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><strong><em>The Denial Spiral</em></strong></a><em>, le pone precio a
+cuánto dura el encuentro, no a cómo termina: por qué la negativa, los señuelos y
+los PIN de coacción son un recurso común que el uso de todos va agotando.</em></p>
+<p><em>Datos de incidentes del</em> <a href="https://github.com/jlopp/physical-bitcoin-attacks"><em>registro de Jameson Lopp</em></a><em>,
+una muestra de prensa: se le escapa lo no reportado y sobrepondera lo que llegó a
+las noticias. Los casos nuevos que encuentro van allá y no a una base de datos
+mía.</em></p>
+<hr />
+<p><strong>Si valió tu tiempo.</strong> Mándaselo a quien te convenció de tu arreglo actual. Una
+⭐ en <a href="https://github.com/Yuri-SVB/Great-Wallet">Great Wall</a>,
+<a href="https://github.com/Yuri-SVB/great-wall-docs">la investigación</a> o
+<a href="https://github.com/Yuri-SVB/great-wall-posts">estos textos</a> no cuesta nada y hace
+más fácil encontrar el trabajo. Y si quieres financiarlo,
+<a href="https://github.com/Yuri-SVB/support">support</a> acepta ⚡ Lightning y on-chain, sin
+registro, sin niveles, sin esperar nada de vuelta.</p>
+</article>
+
+<footer>
+  <p>Free to read, translate and republish. Every figure comes from a
+  press-sourced registry with survivorship bias, coded by headline rather than
+  measured; shares overlap and the fatality share is a floor. A number without
+  its caveat is a bug.</p>
+  <p>The arguments are developed in
+  <a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><em>The Deadly Race</em></a> and
+  <a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><em>The Denial Spiral</em></a>,
+  both open access. Source for this post:
+  <a href="https://github.com/Yuri-SVB/great-wall-posts/tree/main/posts/006-the-deadly-race">great-wall-posts</a>.</p>
+  <p><a href="../../audit/">Self-custody audit</a> ·
+     <a href="../../course/">The course</a> ·
+     <a href="../../">Home</a></p>
+</footer>
+
+</div>
+</body>
+</html>

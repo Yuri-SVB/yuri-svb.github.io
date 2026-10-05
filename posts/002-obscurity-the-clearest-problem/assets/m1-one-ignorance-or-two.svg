@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <style>
+      .bg   { fill: #14141a; }
+      .kick { font-family: "Liberation Sans","DejaVu Sans",Arial,sans-serif;
+              font-size: 28px; font-weight: 700; letter-spacing: 3px; fill: #ffc200; }
+      .head { font-family: "Liberation Serif","DejaVu Serif",Georgia,serif;
+              font-size: 86px; font-weight: 700; fill: #f4f4f6; }
+      .box  { fill: none; stroke: #3a3a46; stroke-width: 2; }
+      .cap  { font-family: "Liberation Sans","DejaVu Sans",Arial,sans-serif;
+              font-size: 25px; font-weight: 700; fill: #f4f4f6; letter-spacing: 1px; }
+      .cnt  { font-family: "Liberation Sans","DejaVu Sans",Arial,sans-serif;
+              font-size: 44px; font-weight: 700; fill: #ffc200; }
+      .li   { font-family: "Liberation Sans","DejaVu Sans",Arial,sans-serif;
+              font-size: 20px; fill: #c8c8d2; }
+      .win  { font-family: "Liberation Sans","DejaVu Sans",Arial,sans-serif;
+              font-size: 20px; font-style: italic; fill: #7fc98a; }
+      .lose { font-family: "Liberation Sans","DejaVu Sans",Arial,sans-serif;
+              font-size: 20px; font-style: italic; fill: #e2483c; }
+      .cav  { font-family: "Liberation Sans","DejaVu Sans",Arial,sans-serif;
+              font-size: 21px; fill: #babac4; }
+      .src  { font-family: "Liberation Sans","DejaVu Sans",Arial,sans-serif;
+              font-size: 18px; fill: #6e6e7c; }
+      .accent { stroke: #ffc200; stroke-width: 6; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="675"/>
+  <line class="accent" x1="80" y1="80" x2="200" y2="80"/>
+
+  <text class="kick" x="80" y="140">SECURITY THROUGH OBSCURITY</text>
+  <text class="head" x="80" y="228">One ignorance, or two</text>
+
+  <rect class="box" x="80"  y="266" width="500" height="216" rx="5"/>
+  <text class="cap" x="106" y="308">DECOY WALLET</text>
+  <text class="cnt" x="106" y="360">1</text>
+  <text class="li"  x="164" y="356">thing he must not know:</text>
+  <text class="li"  x="106" y="398">that decoy wallets exist.</text>
+  <text class="win" x="106" y="444">Grant him that and it works.</text>
+  <text class="win" x="106" y="468">He leaves paid.</text>
+
+  <rect class="box" x="620" y="266" width="500" height="216" rx="5"/>
+  <text class="cap" x="646" y="308">SELF-DESTRUCT PIN</text>
+  <text class="cnt" x="646" y="360">2</text>
+  <text class="li"  x="704" y="356">independent things:</text>
+  <text class="li"  x="646" y="398">the feature, and the backup</text>
+  <text class="li"  x="646" y="424">the manual told you to keep.</text>
+  <text class="lose" x="646" y="468">No branch on which it wins.</text>
+
+  <text class="cav" x="80" y="534">A classification of the designs as their own documentation describes them,</text>
+  <text class="cav" x="80" y="562">not a claim about anyone's intent. Two of the three vendors decline the</text>
+  <text class="cav" x="80" y="590">coercion claim on one of their two mechanisms, and one refused to build it.</text>
+  <text class="src" x="80" y="636">doi.org/10.5281/zenodo.22778480 · CWE-656</text>
+</svg>
