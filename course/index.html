@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Great Wall — the course</title>
+<meta name="description" content="Five live sessions on coercion-resistant Bitcoin self-custody. Textbook and slides are free. Small cohorts, hands-on, every session ends at a keyboard.">
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:title" content="Great Wall — the course">
+<meta property="og:description" content="Five live sessions on coercion-resistant self-custody. Materials free, cohorts small.">
+<meta property="og:image" content="https://yuri-svb.github.io/assets/great-wall.png">
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <img class="mark" src="../assets/mark.png" alt="">
+  <h1>Great Wall — the course</h1>
+  <nav class="lang"><a href="../">Home</a> · <a href="../audit/">Self-custody audit</a></nav>
+</header>
+
+<hr>
+
+<p class="lede">Five live sessions on coercion-resistant self-custody. Every
+one ends at a keyboard. The materials are free and already published; what you
+pay for is the room.</p>
+
+<div class="note">
+  <p><strong>This is a pilot.</strong> Its first job isn't to be complete, it's
+  to be run, watched and corrected. The textbook and slides are version-0
+  drafts, and the first cohort helps debug them. If that sounds like a reason
+  to wait for cohort 2, it probably is. If it sounds interesting, it's the most
+  influence over the material you will ever have.</p>
+</div>
+
+<h2>The five sessions</h2>
+
+<p class="muted small">About 90 minutes live, plus 30–60 minutes of hands-on
+homework between each.</p>
+
+<ol class="questions">
+  <li><strong>The Wrench in the Works.</strong> Why conventional self-custody
+  isn't enough. You leave with your own threat profile sketched, and the viewer
+  installed.</li>
+
+  <li><strong>Secrets You Cannot Tell.</strong> What kind of secret survives
+  coercion. You decode a fractal point by hand and feel what "tacit" means.</li>
+
+  <li><strong>Drawing Inside the Labyrinth.</strong> How a seed becomes a point
+  on a fractal. You encode and round-trip a mini-seed.</li>
+
+  <li><strong>Building the Wall.</strong> What stops an attacker, or you, from
+  rushing. You run the Argon2 chain and calibrate a delay.</li>
+
+  <li><strong>Living With It.</strong> How "trust your memory" is made
+  responsible. A full setup run: train, accelerate, inherit.</li>
+</ol>
+
+<h2>Who it's for</h2>
+
+<p><strong>Assumed:</strong> you know what a seed phrase is, roughly what
+hashing and public-key signatures do, and you can install software and use a
+terminal a bit.</p>
+
+<p><strong>Not assumed:</strong> cryptography, fractal geometry, Rust, Python,
+information theory. Each of those is introduced from zero at the point you
+first need it, with the deeper version in optional boxes you can skip and still
+keep up.</p>
+
+<p>Cohorts are <strong>6 to 12 people</strong>. That's small on purpose — the
+pair work, the explain-it-back exercises and the feedback only work if the room
+is small enough that nobody can hide in it.</p>
+
+<h2>Never with real funds</h2>
+
+<p>The course teaches a real setup using <strong>test entropy only</strong>.
+Never a real seed, never real money, not even to demonstrate. This isn't
+caution theatre: the Great Wall implementation is a prototype, and session 5
+ends by asking you outright whether you'd trust real funds to it yet. "No" is a
+perfectly good answer and several people will give it.</p>
+
+<p>When that changes it will be written down, with a date, in
+<a href="https://github.com/Yuri-SVB/support/blob/main/DELIVERED.md"><code>DELIVERED.md</code></a>.</p>
+
+<h2>What costs money, and what doesn't</h2>
+
+<p>The textbook, the slides, the syllabus and the feedback instruments are
+<strong>free and public</strong>, in the
+<a href="https://github.com/Yuri-SVB/great-wall-docs/tree/main/course">research
+repository</a>. Read the whole thing before deciding whether the live version is
+worth anything to you. That's the point of publishing it.</p>
+
+<p>The software stays free too. Great Wall, BTC-D20, BIP-450 and the papers are
+MIT or Apache-2.0: no "pro" version, no feature behind a payment, no queue for
+donors. What is sold here is time — five live sessions with the person who
+designed the protocol, answering your questions about your setup, in a room
+small enough to ask them.</p>
+
+<p>The joining community is free. Cohort dates and cost are worked out there,
+with the people who want to be in one.</p>
+
+<h2>Joining</h2>
+
+<div class="cta">
+  <p><strong>First cohort forming.</strong> 6–12 seats.</p>
+  <p class="mail"><a href="DISCORD-INVITE-AQUI">Join the Discord</a></p>
+  <p>Free to join, no fee, no application. Read
+  <a href="#house-rules">the house rules</a> before you post — the first one is
+  there for a reason that this course is largely about.</p>
+  <p class="small muted">Prefer email? <a href="mailto:yuri@t3infosecurity.com">yuri@t3infosecurity.com</a></p>
+</div>
+
+<h2 id="house-rules">House rules</h2>
+
+<p>A room full of people learning to protect their bitcoin is, viewed from
+outside, a list of people who hold bitcoin. My own papers are about how target
+lists get built out of records nobody meant to create. I'm not going to host one.</p>
+
+<ol>
+  <li><strong>Never post amounts, balances, addresses, or where you live.</strong>
+  Not yours, not approximately, not as a joke. If a question can only be
+  answered by saying what you hold, it's the wrong question and I'll say so.</li>
+
+  <li><strong>Pseudonyms are welcome.</strong> No real name is ever required, by
+  me or by anyone else. Nobody gets to ask.</li>
+
+  <li><strong>Screenshots: test setups only.</strong> Post fractals freely — but
+  from practice entropy, never from a region you intend to use. Your region is
+  part of your secret.</li>
+
+  <li><strong>I will never DM you first.</strong> Not to offer help, not about
+  payment, not ever. Anyone who does is not me. Report it and I'll ban
+  them.</li>
+
+  <li><strong>No trading, no referrals, no "I can recover your wallet".</strong>
+  Instant removal, no discussion.</li>
+
+  <li><strong>Disagreement is the point.</strong> Session 5 asks you to critique
+  the system and name what would stop you trusting it. Do that in the channels
+  too. The pilot's most valuable output is being told where it's wrong.</li>
+</ol>
+
+<footer>
+  <p>Yuri da Silva Villas Boas is an applied cryptographer, author of BIP-450
+  (Formosa) and of the Great Wall protocol. The arguments the course is built on
+  are in two open-access papers:
+  <a href="https://doi.org/10.5281/zenodo.22018891"><em>The Deadly Race</em></a> and
+  <a href="https://doi.org/10.5281/zenodo.22778480"><em>The Denial Spiral</em></a>.</p>
+</footer>
+
+</div>
+</body>
+</html>

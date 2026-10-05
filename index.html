@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yuri da Silva Villas Boas — Applied Cryptographer</title>
+<meta name="description" content="Coercion-resistant Bitcoin self-custody. Author of BIP-450 (Formosa) and the Great Wall protocol. Two open-access papers on why hiding, denying and decoys are not security mechanisms.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/style.css">
+<meta property="og:title" content="Yuri da Silva Villas Boas — Applied Cryptographer">
+<meta property="og:description" content="Coercion-resistant Bitcoin self-custody. Author of BIP-450 and the Great Wall protocol.">
+<meta property="og:image" content="https://yuri-svb.github.io/assets/great-wall.png">
+<meta property="og:type" content="website">
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <img src="assets/great-wall.png" alt="Great Wall">
+  <h1>Yuri da Silva Villas Boas</h1>
+  <p class="role">Applied cryptographer · coercion-resistant Bitcoin self-custody<br>
+     author of BIP-450 · Great Wall</p>
+  <nav class="social">
+    <a href="https://github.com/Yuri-SVB">GitHub</a> ·
+    <a href="https://twitter.com/yurivillasboas">X</a> ·
+    <a href="https://njump.me/yurisvb@nostrplebs.com">Nostr</a> ·
+    <a href="https://www.linkedin.com/in/yuri-da-silva-villas-boas-a1995143/">LinkedIn</a>
+  </nav>
+  <nav class="lang">Self-custody audit:
+    <a href="audit/">EN</a> ·
+    <a href="consultoria/">PT</a> ·
+    <a href="auditoria/">ES</a> ·
+    <a href="consulenza/">IT</a>
+  </nav>
+</header>
+
+<hr>
+
+<p class="lede">Self-custody advice tells you to hide, deny, and keep a decoy.
+All three are bets on what the attacker believes. None of them has ever been
+assessed as what it is: a security mechanism whose entire strength depends on
+the adversary's ignorance.</p>
+
+<h2>Papers</h2>
+
+<p class="muted small">Both open access, both free, neither behind a signup.
+Each DOI resolves to the current version.</p>
+
+<div class="entry">
+  <span class="title"><a href="https://doi.org/10.5281/zenodo.22018891">The Deadly Race</a></span>
+  <span class="doi">10.5281/zenodo.22018891</span>
+  You cannot prove you forgot. Any scheme that leaves an attacker a
+  feasible-but-unfinished path to the funds leaves you a competing racer for the
+  same balance, and a racer within reach is priced. It ends at a design criterion
+  you can apply to your own setup: the attack must clearly succeed or clearly
+  fail, never become a race.
+</div>
+
+<div class="entry">
+  <span class="title"><a href="https://doi.org/10.5281/zenodo.22778480">The Denial Spiral</a></span>
+  <span class="doi">10.5281/zenodo.22778480</span>
+  A denial's credibility is a commons. It is produced by every holder and
+  consumed by each one who denies, so once denial becomes the expected script it
+  stops carrying information. The cost falls hardest on whoever most needs to be
+  believed, including people who hold nothing at all.
+</div>
+
+<p>Both build on <a href="https://github.com/jlopp/physical-bitcoin-attacks">Jameson
+Lopp's public registry of physical attacks</a>. New incident data goes
+<strong>upstream to that registry</strong>, never into a private dataset. It is
+public property and belongs to everyone, including whoever is next.</p>
+
+<h2>Standards</h2>
+
+<div class="entry">
+  <span class="title"><a href="https://github.com/bitcoin/bips/blob/master/bip-0450.mediawiki">BIP-450 — Formosa</a></span><br>
+  A forwards- and backwards-compatible expansion of BIP-39 that maps seed entropy
+  onto grammatical sentences instead of word lists. In the Bitcoin standards
+  repository. <a href="https://github.com/Yuri-SVB/formosa">Reference implementation</a>.
+</div>
+
+<h2>Projects</h2>
+
+<div class="entry">
+  <span class="title"><a href="https://github.com/Yuri-SVB/Great-Wallet">Great Wall</a></span><br>
+  Coercion-resistant self-custody through Tacit Knowledge-Based Authentication:
+  memory-held entropy navigated against a user-specific perturbation of a
+  fractal. Kerckhoffian and coercion-resistant at the same time.
+  <strong>The implementation is a prototype. Do not put savings behind it yet.</strong>
+</div>
+
+<div class="entry">
+  <span class="title"><a href="https://github.com/Yuri-SVB/BTC-D20">BTC-D20</a></span><br>
+  A printable kit for generating a BIP-39 seed with a 20-sided die, in four
+  languages. Entropy you watch happen, no electronic RNG anywhere. Finished, and
+  needs nothing to keep working.
+</div>
+
+<div class="entry">
+  <span class="title"><a href="https://github.com/Yuri-SVB/great-wall-docs">Research</a></span><br>
+  The threat model, the cost analysis, and the registry coding behind the papers.
+</div>
+
+<div class="entry">
+  <span class="title"><a href="https://github.com/Yuri-SVB/SRVB-Cryptography">SRVB</a> ·
+  <a href="https://github.com/Yuri-SVB/LVBsig/blob/main/docs/white_paper.md">LVBsig</a></span><br>
+  Earlier cryptographic work.
+</div>
+
+<h2>Self-custody audit</h2>
+
+<p>I read the arrangement you already have — hardware wallet, passphrase,
+multisig, decoy, inheritance plan, whatever there is — and answer four questions
+in a closed report.</p>
+
+<ol class="questions">
+  <li><strong>Is your security based on a secret trick?</strong> Does it depend
+  on the attacker not knowing what you do, and how you do it?</li>
+
+  <li><strong>Once your devices and secrets are seized, could the attacker spend
+  right away, or only eventually?</strong> "Eventually" means you are still a
+  competing racer for the same balance.</li>
+
+  <li><strong>Is your custody strictly individual?</strong> Can anyone else do
+  something that stops you reaching your own coins?</li>
+
+  <li><strong>Does it depend on particular objects in particular places?</strong>
+  And do you own those places?</li>
+</ol>
+
+<div class="note">
+  <p><strong>I never ask for your seed, your balances, your addresses or where
+  you live.</strong> The audit works on the shape of your arrangement, not its
+  contents. An auditor of coercion resistance who collected holder data would be
+  assembling exactly the list the papers condemn, and data that was never with me
+  cannot be seized from me.</p>
+</div>
+
+<p>What I will not do is build a decoy with denial training. It is the most
+requested service and the only one I refuse, for the whole argument of
+<em>The Denial Spiral</em>.</p>
+
+<p><a href="audit/">The four questions in full, and what the report contains →</a></p>
+
+<h2>The course</h2>
+
+<p>Five live sessions on coercion-resistant self-custody, cohorts of 6 to 12,
+every session ending at a keyboard. The textbook, slides and syllabus are
+already free and public; what's sold is the room. It's a pilot, and the first
+cohort's job is partly to break it.</p>
+
+<p><a href="course/">The five sessions, who it's for, and how to join &rarr;</a></p>
+
+<h2>Support</h2>
+
+<p>Great Wall, BTC-D20, BIP-450 and the papers are MIT or Apache-2.0, and that
+does not change: no "pro" version, no feature unlocked by payment, no priority
+queue for donors. What is sold is time, not software.</p>
+
+<p><a href="https://github.com/Yuri-SVB/support">Support</a> takes Lightning and
+on-chain, with no signup and nothing expected in return. What has actually
+shipped is logged and dated in git history that anyone can audit:
+<a href="https://github.com/Yuri-SVB/support/blob/main/DELIVERED.md"><code>DELIVERED.md</code></a>.</p>
+
+<h2>Selected writing</h2>
+
+<p><a href="posts/">The series</a> — posts on coercion resistance and the
+physical-attack registry, each in several languages, drafted in the open at
+<a href="https://github.com/Yuri-SVB/great-wall-posts">great-wall-posts</a>.</p>
+
+<ul>
+  <li><a href="https://bitcoinblock.com.br/2026/09/22/esconder-bitcoin-ainda-protege/"><em>Esconder seu bitcoin ainda protege você?</em></a> — Bitcoin Block, 2026 (pt-BR)</li>
+  <li><a href="https://www.toptal.com/algorithms/introducing-srvb-cryptosystem">Introducing the SRVB cryptosystem</a> — Toptal</li>
+  <li><a href="https://www.toptal.com/developers/blockchain/formosa-crypto-wallet-management">Formosa: crypto wallet management</a> — Toptal</li>
+  <li><a href="https://repositorio.ufsc.br/handle/123456789/235360">MSc thesis</a> — UFSC</li>
+  <li><a href="https://ieeexplore.ieee.org/document/9092355">IEEE Xplore 9092355</a> · <a href="https://ieeexplore.ieee.org/document/9239493">9239493</a> — conference papers</li>
+</ul>
+
+<footer>
+  <p>Contact: <a href="mailto:yuri@t3infosecurity.com">yuri@t3infosecurity.com</a></p>
+  <p>Source: <a href="https://github.com/Yuri-SVB/yuri-svb.github.io">Yuri-SVB/yuri-svb.github.io</a></p>
+</footer>
+
+</div>
+</body>
+</html>
