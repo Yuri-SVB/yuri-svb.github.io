@@ -6,7 +6,7 @@
   --accent: #b07b00;
   --brand: #ffc200;
   --card: #ffffff;
-  --measure: 40rem;
+  --measure: 64rem;
 }
 
 @media (prefers-color-scheme: dark) {
