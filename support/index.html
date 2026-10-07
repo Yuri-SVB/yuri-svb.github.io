@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Yuri da Silva Villas Boas</title>
+<meta name="description" content="Support the work on coercion-resistant Bitcoin self-custody: Lightning (BOLT12) and on-chain (silent payment), no signup, nothing expected in return.">
+<link rel="icon" href="../favicon.ico">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <img class="mark" src="../assets/mark.png" alt="">
+  <h1>Support</h1>
+  <nav class="lang"><a href="../">Home</a> ·
+    <a href="../support/delivered/">Delivered</a> ·
+    <a href="../posts/">Posts</a></nav>
+</header>
+
+<hr>
+
+<article>
+<p class="lede">Free software and free documents on coercion-resistant Bitcoin self-custody.
+Nothing here is gated, delayed, or for sale. If some of it was worth something
+to you, this is where to say so.</p>
+<p><img src="../assets/support/lightning-offer-qr.png" width="240" alt="Lightning BOLT12 offer QR code"></p>
+<p><strong>⚡ Lightning</strong> — BOLT12 offer · reusable · scan the code or copy the string</p>
+<pre><code>lno1pgqppmsrse80qf0aara4slvcjxrvu6j2rp5ftmjy4yntlsmsutpkvkt6878sx00dte5jw8axkhj4zg6skes6cema5ntf6xg3czz94yqzg8rv66vjqgpusqusntzmtyc30d4k9axx6j75zyquezf9hyrheh4lggnmm8sypzqqxwrklrq3vj2y9w4jxp0fzdxh8rc4rzf2m7ssrte56upl2qqm85ffxtwl5ay90e0z2uscpm3eyxdr9c07s2pqxw0x4pfmzcdxelfju0hh0apdmxxc3l9lld5h2wfuhwulsedjjg3eqqew5wgxv3zc6qzsl0eahjhsznvpxe88rzxw04yw5685jj4quqny9xqpmvehu3dmtq6t7pnzs2zjuaewcgyq
+</code></pre>
+<details>
+<summary>ℹ️ <sub>What is a BOLT12 offer?</sub></summary>
+<p>A <strong>BOLT12 offer</strong> (<code>lno1…</code>), not a Lightning address or a BOLT11 invoice.
+Permanent and reusable — your wallet fetches a fresh invoice from it on every
+payment, over a blinded path, so nothing is reused and paying it does not
+reveal my node.</p>
+<blockquote>
+<p><strong>⚠️ Wallet support is narrower than for <code>lnbc…</code> invoices.</strong><br>
+<strong>Phoenix</strong>, <strong>Zeus</strong>, and <strong>Core Lightning</strong> pay offers today. If your wallet
+rejects it, that is a missing feature, not a bad string.</p>
+</blockquote>
+</details>
+<p><img src="../assets/support/silent-payment-qr.png" width="240" alt="Silent payment address QR code"></p>
+<p><strong>⛓️ On-chain</strong> — silent payment · BIP-352</p>
+<pre><code>sp1qq2d6duq9c3f3tewjpd4gry4y5q849yq3qna48r725p785kgxgmugqq469df4alnlf07afhpukw2nvmn6j8rnh56539w73e8m84ddt7858qgkjlnw
+</code></pre>
+<details>
+<summary>ℹ️ <sub>Why a silent payment?</sub></summary>
+<p>A silent payment address (<code>sp1…</code>,
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0352.mediawiki">BIP-352</a>) —
+for larger amounts and for people who run no Lightning wallet at all. Every
+payment lands on a fresh, unlinkable output, so nothing accumulates in public.</p>
+</details>
+<p>What has actually shipped is logged in <a href="delivered/"><code>DELIVERED.md</code></a>, dated,
+in git history that anyone can audit.</p>
+<hr />
+<h2>📦 The work</h2>
+<p><strong>📜 <a href="https://github.com/bitcoin/bips/blob/master/bip-0450.mediawiki">BIP-450 — Formosa</a></strong><br>
+A forwards- and backwards-compatible expansion of BIP-39 that maps seed entropy
+onto grammatical sentences instead of word lists. In the Bitcoin standards
+repository.</p>
+<p><strong>🎲 <a href="https://github.com/Yuri-SVB/BTC-D20">BTC-D20</a></strong><br>
+A printable two-page kit for generating a BIP-39 seed phrase with a 20-sided
+die, in English, Spanish, Italian, and Brazilian Portuguese. Entropy you watch
+happen, with no electronic RNG anywhere in the process.</p>
+<p><strong>🧱 <a href="https://github.com/Yuri-SVB/Great-Wallet">Great Wall</a></strong><br>
+A protocol for coercion-resistant self-custody through Tacit Knowledge-Based
+Authentication — memory-held entropy navigated against a user-specific
+perturbation of a fractal, gated by a calibrated derivation. The first
+construction that is Kerckhoffian and coercion-resistant at the same time.</p>
+<p><strong>🔬 <a href="https://github.com/Yuri-SVB/great-wall-docs">Research</a></strong><br>
+A formal threat model for physical ("$5 wrench") attacks on Bitcoin holders,
+building on <a href="https://github.com/jlopp/physical-bitcoin-attacks">Jameson Lopp's incident registry</a>,
+to which incident data goes upstream — where it is public property and belongs
+to everyone, not to this project.</p>
+<hr />
+<h2>🤝 What support does, per project</h2>
+<p>These are at different stages, and the honest ask differs for each.</p>
+<h3>🎲 BTC-D20 — a finished thing</h3>
+<p>It works today, it needs nothing from me to keep working, and it will never
+need a server, a subscription, or an update. If you printed it and used it,
+that's the classic case: it was worth something, you decide how much.</p>
+<h3>🧱 Great Wall — development, not a product</h3>
+<p>The implementation is a <strong>prototype</strong>. Do not put savings behind it yet.
+Support here funds the work that gets it to the point where I would tell you
+otherwise. It is not a purchase, and it buys no priority, no early access, and
+no support obligation.</p>
+<h3>🔬 The research — papers, standards, registry work</h3>
+<p>BIP-450 is finished and public. The threat-model work is under academic review.
+The incident data belongs to the registry that hosts it. None of this is
+fundable in the ordinary sense and none of it pays; if you think it should
+exist, this is the mechanism.</p>
+<hr />
+<h2>✅ The pledge</h2>
+<ul>
+<li><strong>Free forever.</strong> MIT or Apache-2.0, and that does not change.</li>
+<li><strong>No gated features.</strong> Not now, not in a later "pro" edition.</li>
+<li><strong>No donor priority.</strong> Donating buys no support obligation, no feature
+  requests, and no place in a queue. If you need something, open an issue like
+  everyone else — that is where it will be answered.</li>
+<li><strong>No delayed releases.</strong> Nothing is held back for supporters.</li>
+</ul>
+<p>If you want something built, say so in an issue. That directs the work better
+than money does.</p>
+<hr />
+<h2>🔍 Notes on the two rails</h2>
+<p><strong>Lightning</strong> is for small and impulsive amounts. The keys are mine — nothing
+here is custodial — but liquidity is managed by a provider rather than by a
+node I would have to keep alive. A donation channel only ever receives, so its
+inbound capacity depletes in one direction and payments eventually start
+failing silently, on your screen, where I would never learn about it. That
+trade buys reliability at the cost of a piece of infrastructure sovereignty a
+tip jar does not need. Stating it plainly seems better than implying otherwise.</p>
+<p>A BOLT12 offer rather than a static invoice or a Lightning address, because it
+is reusable without being <em>reused</em>: each payment fetches its own invoice over a
+blinded path, so donations are not linkable to one another and paying one does
+not reveal my node.</p>
+<p><strong>The on-chain rail</strong> is a silent payment address — for larger amounts and for
+people who keep everything in cold storage and run no Lightning wallet at all.</p>
+<p>It is a silent payment rather than an ordinary address for a reason that is
+the whole argument of this project: a static reused address publishes a running
+balance next to a real name, which is precisely the targeting pattern the
+research documents — attacks driven by aggregated public data rather than by
+anything the holder disclosed. Every payment to an <code>sp1</code> address lands on a
+fresh, unlinkable output instead. Nothing accumulates in public.</p>
+<p>The same principle runs through both rails, and it is the only reason either is
+shaped the way it is: the point is not that you should trust me. It is that you
+should not have to.</p>
+</article>
+
+<footer>
+  <p><a href="../posts/">Posts</a> ·
+     <a href="../audit/">Self-custody audit</a> ·
+     <a href="../course/">The course</a> ·
+     <a href="../">Home</a></p>
+  <p>Contact: <a href="mailto:yuri@t3infosecurity.com">yuri@t3infosecurity.com</a></p>
+  <p>This page is rendered from
+     <a href="https://github.com/Yuri-SVB/support/blob/main/README.md"><code>README.md</code></a>
+     in <a href="https://github.com/Yuri-SVB/support">Yuri-SVB/support</a>, which
+     is where the dates and the git history live.</p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -183,3 +183,49 @@ article img { max-width: 100%; height: auto; }
 article p[align="center"] { margin: 2rem 0; }
 article h2 { margin-top: 2.5rem; }
 article ol > li, article ul > li { margin-bottom: .8rem; }
+
+/* rendered support pages
+   A BOLT12 offer is ~370 characters with no space in it and a silent payment
+   address ~120, so these have to break mid-token or they push the column
+   sideways on a phone. `anywhere` rather than `break-all` so ordinary inline
+   code still breaks at word boundaries first. */
+article pre {
+  background: color-mix(in srgb, var(--fg) 6%, transparent);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: .7rem .8rem;
+  margin: 1rem 0 1.4rem;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+article pre code {
+  background: none;
+  padding: 0;
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+/* The QR codes sit above the string they encode rather than beside it: the
+   column is 40rem and a float would leave the string in a gutter. */
+article p > img[width="240"] { display: block; margin: 1.6rem 0 .6rem; }
+
+article details {
+  border-left: 3px solid var(--rule);
+  padding-left: 1rem;
+  margin: 0 0 1.8rem;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+article details > summary { cursor: pointer; color: var(--accent); }
+
+article details[open] > summary { margin-bottom: .6rem; }
+
+article blockquote {
+  margin: 1rem 0;
+  padding-left: .9rem;
+  border-left: 3px solid var(--brand);
+}
+
+article blockquote p:last-child { margin-bottom: 0; }

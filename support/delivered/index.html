@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delivered — Yuri da Silva Villas Boas</title>
+<meta name="description" content="What has actually shipped on Great Wall, BIP-450, BTC-D20 and the wrench-attack research, dated, newest first.">
+<link rel="icon" href="../../favicon.ico">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <img class="mark" src="../../assets/mark.png" alt="">
+  <h1>Delivered</h1>
+  <nav class="lang"><a href="../../">Home</a> ·
+    <a href="../../support/">Support</a> ·
+    <a href="../../posts/">Posts</a></nav>
+</header>
+
+<hr>
+
+<article>
+<p class="lede">A dated record of what has actually shipped, newest first.</p>
+<p>This file exists so that "the work is happening" is a checkable claim rather
+than an assertion. Git carries the timestamps, so entries cannot be quietly
+backdated or removed — <a href="https://github.com/Yuri-SVB/support/commits/main/DELIVERED.md">check the log</a>
+rather than taking this page's word for it.</p>
+<p>No promises are made about cadence. Entries are added when something ships,
+and nothing is listed here that has not.</p>
+<hr />
+<p><strong>📰 2026-10-05 — Ten posts published, five languages each</strong><br>
+A <a href="https://yuri-svb.github.io/posts/">reading series</a> on coercion-resistant
+self-custody, fifty pages in English, Portuguese, Spanish, French and Italian:
+why the window for keeping a low profile has closed, what Kerckhoffs says about
+decoys and duress PINs, the arithmetic that makes a half-finished seizure price
+the holder's death, the Balland case, the RATIRL torture, a French tax-office
+database queried for people who had declared crypto gains, and what today's
+wrench-attack numbers extrapolate to. Each one ends at a DOI rather than at a
+PDF in a repository, and every figure carries its caveat in the same sentence:
+the registry is a press-sourced sample coded by headline, the categories
+overlap, and the fatality share is a floor.</p>
+<p>Two had run before and are included for completeness: <em>The Window Has Closed</em>
+on 17 September, and <em>Does Hiding Your Bitcoin Still Protect You?</em> in Brazilian
+Portuguese at <a href="https://bitcoinblock.com.br/2026/09/22/esconder-bitcoin-ainda-protege/">bitcoinblock.com.br</a>
+on 22 September. The other eight are new. The arguments are the two open-access
+papers, <a href="https://zenodo.org/doi/10.5281/zenodo.22018891"><em>The Deadly Race</em></a> and
+<a href="https://zenodo.org/doi/10.5281/zenodo.22778480"><em>The Denial Spiral</em></a>; the posts
+are the plain-language route in.</p>
+<p><strong>🌀 2026-09-16 — <em>The Denial Spiral</em> v1 deposited</strong><br>
+<a href="https://doi.org/10.5281/zenodo.22778480">Companion paper</a> split out of the
+wrench-attack threat model: the obscurity class, the mechanism running from a
+norm of concealment through attacker disbelief to further coercion, the
+praxeological account of what kind of claim this is, the four mechanisms that
+censor the evidence — one of which survives publication — and the registry
+coding method behind the empirical grounding. Concept DOI; resolves to the
+latest version.</p>
+<p><strong>💀 2026-09-16 — <em>The Deadly Race</em> v4</strong><br>
+<a href="https://doi.org/10.5281/zenodo.22778256">Fourth version</a> of the coercion-resistance
+threat model, with a <a href="https://github.com/Yuri-SVB/great-wall-docs/blob/main/papers/wrench-attack-threat-model/CHANGES-v4.md">changelog</a>
+absorbing v3, which shipped without one. The manuscript is now two papers, cut
+along the epistemic boundary. Three claims v2 stated loosely are made rigorous:
+the pivotal condition is non-completion rather than relative pace, the spend
+authority is a set of states rather than a private key, and the hostage surface
+needs a necessary <em>subset</em> of tokens rather than a single necessary one. A
+vendor now documents the naive tier in its own words, and the design comparison
+gains a column asking the criterion directly — which the four properties do not
+generate. No design's classification changed.</p>
+<p><strong>🔗 2026-08-13 — Three incidents merged into the physical-attacks registry</strong><br>
+Revelles (FR), Trincity (TT), and Paris (FR) added to
+<a href="https://github.com/jlopp/physical-bitcoin-attacks/pull/212"><code>jlopp/physical-bitcoin-attacks</code></a>
+with archival links, reviewed and merged upstream. The data belongs to the
+registry, not to this project.</p>
+<p><strong>🎲 2026-08-05 — BTC-D20 published</strong><br>
+<a href="https://github.com/Yuri-SVB/BTC-D20">Printable D20 seed-generation kit</a> in
+English, Spanish, Italian, and Brazilian Portuguese. The lookup table is built
+directly from the commit-pinned <code>bitcoin/bips</code> wordlist, and both worked
+examples are machine-verified against the BIP-39 checksum algorithm.</p>
+<p><strong>🎥 2026-08-02 — Great Wall demo 50: protocol 0.4.0</strong><br>
+<a href="https://www.youtube.com/watch?v=9lJvw-8PZOA">Walkthrough</a> of the protocol at
+version 0.4.0.</p>
+<p><strong>🧂 2026-07-05 — Namtso, the Sacred Salt</strong><br>
+<a href="https://github.com/Yuri-SVB/namtso-the-sacred-salt">Reference library and CLI</a>
+for a memorization-free, precomputation-resistant salt derived from the Bitcoin
+timechain: a person reproduces it from a single remembered date, harvests from a 
+local node, an offline headers bundle, or cross-checked public explorers, with 
+optional date cloaking so a remote source learns an interval rather than the day. 
+Shipped with frozen test vectors.</p>
+<p><strong>🎥 2026-06-28 — Great Wall demo 45: Dart interface</strong><br>
+<a href="https://youtu.be/zoJF1Ex7hkI">Video</a> of the reworked interface — the
+polished-UX milestone.</p>
+<p><strong>🎥 2026-05-31 — Great Wall demo 40: 24-word round trip</strong><br>
+<a href="https://www.youtube.com/watch?v=oeHELcybK5E">Video</a> demonstrating the
+bijection at maximum-length input, in both directions.</p>
+<p><strong>📚 2026-05-31 — <code>great-wall-docs</code> consolidated</strong><br>
+Design documents, threat model, architecture, papers, and go-to-market
+material gathered into
+<a href="https://github.com/Yuri-SVB/great-wall-docs">one public repository</a>.</p>
+<p><strong>📣 2026-05-31 — Public peer review opened</strong><br>
+A Great Wallet discussion opened on the <strong>bitcoindev</strong> mailing list, putting
+the protocol in front of open review.</p>
+<p><strong>🎬 2026-05-31 — Formosa / BIP-450 explained</strong><br>
+<a href="https://www.youtube.com/watch?v=-Obi5y_rM7c">Guest appearance</a> walking
+through Formosa and BIP-450 (in Portuguese).</p>
+<p><strong>🎥 2026-05-19 — Great Wallet demo 39: BIP-39 round trip</strong><br>
+<a href="https://www.youtube.com/watch?v=qO66Hg07WNM">Video</a> demonstrating the 12-word
+bijection in both directions.</p>
+<p><strong>📜 2026-04-17 — BIP-450 (Formosa) merged into <code>bitcoin/bips</code></strong><br>
+Formosa promoted from proposal to
+<a href="https://github.com/bitcoin/bips/blob/master/bip-0450.mediawiki">an official BIP</a>:
+seed entropy mapped onto grammatical sentences, forwards- and
+backwards-compatible with BIP-39.</p>
+</article>
+
+<footer>
+  <p><a href="../../posts/">Posts</a> ·
+     <a href="../../audit/">Self-custody audit</a> ·
+     <a href="../../course/">The course</a> ·
+     <a href="../../">Home</a></p>
+  <p>Contact: <a href="mailto:yuri@t3infosecurity.com">yuri@t3infosecurity.com</a></p>
+  <p>This page is rendered from
+     <a href="https://github.com/Yuri-SVB/support/blob/main/DELIVERED.md"><code>DELIVERED.md</code></a>
+     in <a href="https://github.com/Yuri-SVB/support">Yuri-SVB/support</a>, which
+     is where the dates and the git history live.</p>
+</footer>
+
+</div>
+</body>
+</html>
