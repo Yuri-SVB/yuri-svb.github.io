@@ -30,7 +30,8 @@ point where that file points them, `doi.org` entries and version DOIs included:
 a version DOI is correct in a changelog entry about that version, so a blanket
 rewrite to the concept DOI would corrupt the record it is there to keep. The
 rewrites below are all layout — GitHub markup that has no meaning on a page
-that is not GitHub.
+that is not GitHub — with one exception, SELF_FIRST, which only reorders two
+links the source already gives.
 """
 
 import argparse
@@ -131,6 +132,22 @@ def split_title(md_text):
     return title, (md_text[:m.start()] + md_text[m.end():]).lstrip()
 
 
+# On GitHub the posts repository is the primary home and this site the mirror,
+# so DELIVERED.md says "[reading series](repo) also live at [site](site)". Read
+# on the site, that sends a reader away to find what is already here. The two
+# links are swapped, so the site is named first and the repository second. The
+# words around them are the source's.
+SELF_FIRST = re.compile(
+    r"\[([^\]]+)\]\((https://github\.com/Yuri-SVB/great-wall-posts/?)\)"
+    r"(\s+)also live at(\s+)"
+    r"\[yuri-svb\.github\.io\]\((https://yuri-svb\.github\.io/posts/)\)")
+
+
+def self_first(md_text):
+    return SELF_FIRST.sub(
+        r"[\1](\5)\3also available at\4[great-wall-posts](\2)", md_text)
+
+
 def rewrite_github_markup(md_text, depth):
     """Turn GitHub-only markup into something a page can use.
 
@@ -170,7 +187,8 @@ ENTRY_TITLE = re.compile(
 
 
 def render(md_text, spec):
-    md_text = rewrite_github_markup(drop_masthead(md_text), spec["depth"])
+    md_text = self_first(
+        rewrite_github_markup(drop_masthead(md_text), spec["depth"]))
     title, body_md = split_title(md_text)
     body = markdown.markdown(
         body_md, extensions=["extra", "sane_lists", "md_in_html"])

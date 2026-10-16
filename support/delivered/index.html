@@ -29,6 +29,23 @@ rather than taking this page's word for it.</p>
 <p>No promises are made about cadence. Entries are added when something ships,
 and nothing is listed here that has not.</p>
 <hr />
+<p><strong>🔧 2026-10-16 — Formosa: Table Selector fixes and keyboard navigation</strong><br>
+A screening pass over the <a href="https://github.com/Yuri-SVB/formosa">Formosa</a>
+desktop application. Fixes: the shuffle of the grid keys, the only thing hiding
+the chosen word from an onlooker, was drawn from a Mersenne Twister whose every
+output is put on screen, which is enough to predict the next ones; it is now
+drawn from the system entropy source. Switching tabs no longer sends the grid
+back to the first word of a half-built phrase, so the next pick can no longer
+fill the wrong slot. Two tabs opened blank until clicked. An error mid-search
+could leave a cached theme searching the wrong words. Changing theme enabled
+Generate Phrase with nothing picked. <code>setup.py</code>, still Trezor's, could not run,
+and an installed copy would have carried no themes. <code>output.txt</code>, where Save
+writes seed phrases in plain text, was not git-ignored. Improvements:
+Backspace and a Back button give up the last key or word picked; the left and
+right arrows walk the phrase so an earlier word can be reviewed or swapped, with
+the compatibility warning recomputed from the words each time; Ctrl+PageUp and
+Ctrl+PageDown cycle the tabs; and the screen says which word the grid is on
+("Phrase 2, word 3 of 6") and names the syntactic slot being filled.</p>
 <p><strong>🎥 2026-10-16 — Great Wall demo 60: the rendered film, protocol 0.4.0</strong><br>
 <a href="https://www.youtube.com/watch?v=3sKMejVDF9s">Full-length film</a> from
 <code>great-wall-render</code>, an offline renderer that animates the encoding itself:
@@ -42,8 +59,8 @@ costs hours per stage, so nobody could have produced it faster. Demo entropy
 only — the renderer displays the bits, which is exactly why it must never see
 a real seed.</p>
 <p><strong>📰 2026-10-05 — Ten posts published, five languages each</strong><br>
-A <a href="https://github.com/Yuri-SVB/great-wall-posts">reading series</a> also live at
-<a href="https://yuri-svb.github.io/posts/">yuri-svb.github.io</a> on coercion-resistant
+A <a href="https://yuri-svb.github.io/posts/">reading series</a> also available at
+<a href="https://github.com/Yuri-SVB/great-wall-posts">great-wall-posts</a> on coercion-resistant
 self-custody, fifty pages in English, Portuguese, Spanish, French and Italian:
 why the window for keeping a low profile has closed, what Kerckhoffs says about
 decoys and duress PINs, the arithmetic that makes a half-finished seizure price
