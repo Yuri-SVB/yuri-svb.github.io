@@ -29,6 +29,40 @@ rather than taking this page's word for it.</p>
 <p>No promises are made about cadence. Entries are added when something ships,
 and nothing is listed here that has not.</p>
 <hr />
+<p><strong>🎲 2026-11-04 — Great Wallet: map points from Dragon Dice</strong><br>
+A map's 32-bit point can now come from real dice. The Dragon Dice wizard
+opens inside the wallet, and the point is the first 32 bits of the rolls'
+digest. It asks for 40 bits rather than 32, because cutting a digest to 32
+bits loses a little and 32-bit outputs can be tabulated. System randomness is
+mixed in by default but not counted; the mouse and the camera can be added,
+and count. System random on its own stays available, behind a warning.
+great-wallet <code>eba12d6</code>.</p>
+<p><strong>🎲 2026-11-04 — Dragon Dice</strong><br>
+Entropy from real dice that anyone can audit. You type the rolls of physical
+dice: a coin, D4 to D20, or a custom die such as a card drawn from a shuffled
+deck. The secret is the SHA-512 of their canonical JSON, so <code>sha512sum</code> can
+check it, and from it come a BIP39 mnemonic or any number of bits. Captures of
+the mouse, accelerometer and camera can be mixed in, each credited by NIST SP
+800-90B's most-common-value estimate. 1 KiB of system randomness can be mixed
+in as a backup that is never counted. By default the rolls are ready once
+they carry the target, assuming fair dice. Advanced mode instead estimates the
+chance that biased dice fall short and draws it as a curve. Because the curve
+shows how the rolls are spread, it asks for a private screen first. Dragon
+Dice comes as a terminal app, a Flutter wizard other apps embed, and a desktop
+app. The format is pinned by frozen vectors checked against Python's
+<code>hashlib</code>. dragon-dice <code>b002073</code>.</p>
+<p><strong>⌨️ 2026-11-03 — Great Wallet: interface remaster</strong><br>
+Setup is now worked from a command board with four contexts: Main, Setup,
+Path and View. Each is a 3 × 4 grid of keys bound by physical position, so it
+works on any keyboard layout, and hovering a button explains it in the log.
+The side panel is gone: each context's fields open in place only when needed.
+Path gains flights between landmark stops, a view that frames the whole path,
+and toggles for stop numbers and lines. Halt now really stops the stage
+advance, and the same key resumes it. Only standard setups are accepted, with
+nine maps a stage; pre-orbit chain setups are no longer supported. The window
+shows the app's and the protocol's versions. Every sound cue plays by name
+from a plain-text map in a folder, so sounds can be swapped while the app
+runs. great-wallet <code>86b2640</code>.</p>
 <p><strong>🎨 2026-10-26 — Great Wallet: brightness controls</strong><br>
 Brightness now falls steadily with escape count, so a deeper shell is never
 brighter than a shallower one. A slope control (<code>G</code>) joins the offset (<code>L</code>),
